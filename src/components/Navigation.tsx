@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
+import logo from '@/assets/cropped_image (1).png'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,7 @@ const Navigation = () => {
     { name: "BI Dashboard", href: "/dashboard", description: "Analytics Dashboard" },
   ];
 
-  const navItems =  [
+  const navItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
@@ -50,13 +51,13 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-         <Link to="/" className="flex items-center space-x-2">
-  <img src="src/assets/cropped_image (1).png" alt="SoftpulseAI Logo" className="w-8 h-8 rounded-lg" />
-  <span className="flex flex-col leading-none">
-    <span className="text-xl font-bold gradient-text">SOFTPULSEAI</span>
-    <span className="text-xs text-gray-500 tracking-wider">TECHNOLOGIES</span>
-  </span>
-</Link>
+          <Link to="/" className="flex items-center space-x-2">
+            <img src={logo} alt="SoftpulseAI Logo" className="w-8 h-8 rounded-lg" />
+            <span className="flex flex-col leading-none">
+              <span className="text-xl font-bold gradient-text">SOFTPULSEAI</span>
+              <span className="text-xs text-gray-500 tracking-wider">TECHNOLOGIES</span>
+            </span>
+          </Link>
 
 
           {/* Desktop Navigation */}
@@ -99,19 +100,19 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-<Button
-  variant="ghost"
-  size="sm"
-  className="
+          <Button
+            variant="ghost"
+            size="sm"
+            className="
     md:hidden 
     text-foreground
     hover:text-foreground focus:text-foreground active:text-foreground
     hover:bg-transparent focus:bg-transparent active:bg-transparent
   "
-  onClick={() => setIsOpen(!isOpen)}
->
-  {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-</Button>
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </Button>
 
         </div>
 
@@ -129,22 +130,22 @@ const Navigation = () => {
                   >
                     {item.name}
                   </a>
-                ) 
-                : (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={cn(
-                      "text-foreground/80 hover:text-foreground transition-colors py-2 font-medium",
-                      location.pathname === item.href && "text-primary font-semibold"
-                    )}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
                 )
+                  : (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={cn(
+                        "text-foreground/80 hover:text-foreground transition-colors py-2 font-medium",
+                        location.pathname === item.href && "text-primary font-semibold"
+                      )}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )
               ))}
-              
+
               <div className="flex items-center justify-between mt-4 pt-4 border-t border-border/20">
                 <ThemeToggle />
                 <Button className="gradient-primary hover:shadow-primary">
