@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from 'path';
 
 export default defineConfig({
-  base: '/', // Use '/' for root deployment or when using a custom domain
+  base: '/SoftPulseWeb/', // Correct base for your repo!
   server: {
     host: "::",
     port: 8080,
