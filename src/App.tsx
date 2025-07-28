@@ -60,7 +60,7 @@ const ScrollToTopOnRouteChange = () => {
 const queryClient = new QueryClient();
 
 const App = () => (
-  <ThemeProvider defaultTheme="light" storageKey="softpulse-ui-theme">
+  <ThemeProvider defaultTheme="system" storageKey="softpulse-ui-theme">
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
