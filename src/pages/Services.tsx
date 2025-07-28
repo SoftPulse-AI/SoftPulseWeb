@@ -327,12 +327,26 @@ const Services = () => {
 
                         {/* CTA */}
                         <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-white/10">
-                          <Button className="gradient-primary hover:shadow-primary flex-1">
-                            Get Quote
-                          </Button>
-                          <Button variant="outline" className="flex-1">
-                            Learn More
-                          </Button>
+                          <Button
+  className="gradient-primary hover:shadow-primary flex-1"
+  onClick={() => { window.location.href = '/contact' }}
+>
+  Get Quote
+</Button>
+<Button
+  variant="outline"
+  className="flex-1"
+  onClick={() => {
+    const link = document.createElement('a');
+    link.href = '/CompanyProfile.pdf'; // Replace this with your actual PDF path
+    link.download = 'CompanyProfile.pdf'; // You can set the file name as preferred
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }}
+>
+  Learn More
+</Button>
                         </div>
                       </div>
                     )}
@@ -354,12 +368,20 @@ const Services = () => {
                   and drive sustainable business growth.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="gradient-primary hover:shadow-primary">
-                    Start Project
-                  </Button>
-                  <Button size="lg" variant="outline">
-                    Schedule Consultation
-                  </Button>
+                 <Button
+  size="lg"
+  className="gradient-primary hover:shadow-primary"
+  onClick={() => { window.location.href = '/contact'; }}
+>
+  Start Project
+</Button>
+<Button
+  size="lg"
+  variant="outline"
+onClick={() => window.open('https://calendly.com/softpulseai/30min', '_blank')}
+>
+  Schedule Consultation
+</Button>
                 </div>
               </CardContent>
             </Card>

@@ -157,7 +157,7 @@ const SoftPulseHIS = () => {
               Ready to Transform Your <span className="gradient-text">Hospital Operations?</span>
             </h3>
             <p className="text-xl text-foreground/80 mb-8">
-              Join 5+ hospitals across India who trust SoftPulse HIS for their digital transformation.
+              Join MUltiple hospitals across India who trust SoftPulse HIS for their digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="gradient-primary hover:shadow-primary text-lg px-8 py-6">

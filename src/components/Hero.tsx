@@ -107,7 +107,7 @@ const Hero = () => {
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-4xl mx-auto">
           <div className="glass-card p-6 rounded-xl hover-lift border-primary/10">
-            <div className="text-3xl font-bold gradient-text mb-2">5+</div>
+            <div className="text-3xl font-bold gradient-text mb-2">N+</div>
             <div className="text-muted-foreground">Hospitals Using Our Systems</div>
           </div>
           <div className="glass-card p-6 rounded-xl hover-lift border-primary/10">

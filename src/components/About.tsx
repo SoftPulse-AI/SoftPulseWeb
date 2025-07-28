@@ -78,7 +78,7 @@ const About = () => {
                 and billing in revolutionary ways.
               </p>
               <p>
-                Today, we're proud to serve <strong className="text-accent">5+ hospitals across India</strong> and 
+                Today, we're proud to serve <strong className="text-accent">Multiple hospitals across India</strong> and 
                 numerous other organizations with customized platforms, mobile apps, and automation tools.
               </p>
             </div>

@@ -1,14 +1,17 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Allow all crawlers full access
 User-agent: *
 Allow: /
+
+# Sitemap location for easy discovery by search engines
+Sitemap: https://softpulseai.in/sitemap.xml
+
+# Optional: Crawl delay (uncomment if your server needs it)
+# Crawl-delay: 5
+
+# Optional: Block sensitive or non-public folders if any
+# Disallow: /admin/
+# Disallow: /private/
+
+# Optional: Block specific bots if needed (example)
+# User-agent: BadBot
+# Disallow: /

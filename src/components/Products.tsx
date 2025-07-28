@@ -148,7 +148,7 @@ const Products = () => {
         <div className="text-center mt-16">
           <div className="glass-card p-8 rounded-2xl max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">
-              Currently Serving <span className="gradient-text">5+ Hospitals</span> Across India
+              Currently Serving <span className="gradient-text">Multiple Hospitals</span> Across India
             </h3>
             <p className="text-foreground/70 mb-6">
               Join the growing number of healthcare institutions that trust SoftpulseAI for their digital transformation.

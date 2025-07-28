@@ -285,12 +285,28 @@ const Products = () => {
 
                         {/* CTA */}
                         <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-white/10">
-                          <Button className="gradient-primary hover:shadow-primary flex-1">
-                            Request Demo
-                          </Button>
-                          <Button variant="outline" className="flex-1">
-                            Learn More
-                          </Button>
+                          <Button
+  className="gradient-primary hover:shadow-primary flex-1"
+  onClick={() => window.open('https://calendly.com/softpulseai/30min', '_blank')}
+>
+  Request Demo
+</Button>
+<Button
+  variant="outline"
+  className="flex-1"
+  onClick={() => {
+    // Replace '/brochure.pdf' with your actual brochure file path
+    const link = document.createElement('a');
+    link.href = '/Healthcare Profile.pdf';
+    link.download = 'Healthcare Profile.pdf'; // Optional: choose your filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }}
+>
+  Learn More
+</Button>
+
                         </div>
                       </div>
                     )}
@@ -308,15 +324,23 @@ const Products = () => {
                   Ready to Transform Your Healthcare Operations?
                 </h2>
                 <p className="text-foreground/80 mb-8 max-w-2xl mx-auto">
-                  Join 5+ hospitals and 50+ clinics already using our solutions to enhance patient care and operational efficiency.
+                  Join Multiple hospitals and 50+ clinics already using our solutions to enhance patient care and operational efficiency.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="gradient-primary hover:shadow-primary">
-                    Schedule Demo
-                  </Button>
-                  <Button size="lg" variant="outline">
-                    Contact Sales
-                  </Button>
+                <Button
+    size="lg"
+    className="gradient-primary hover:shadow-primary"
+    onClick={() => window.open('https://calendly.com/softpulseai/30min', '_blank')}
+  >
+    Schedule Demo
+  </Button>
+  <Button
+    size="lg"
+    variant="outline"
+    onClick={() => { window.location.href = '/contact'; }}
+  >
+    Contact Sales
+  </Button>
                 </div>
               </CardContent>
             </Card>

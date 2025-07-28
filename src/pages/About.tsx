@@ -98,11 +98,11 @@ const About = () => {
                 About SoftpulseAI Technologies
               </h1>
               <p className="text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed">
-                Leading IT Solutions in Website Development, App Development, Healthcare & AI-Powered Systems. 
+                {/* Leading IT Solutions in Website Development, App Development, Healthcare & AI-Powered Systems. 
                 Our mission is to deliver scalable, innovative digital solutions that fuel business growth, 
                 enhance operational efficiency, and elevate customer experiences across diverse industries. 
                 Partner with SoftpulseAI to accelerate your digital transformation journey and amplify your 
-                brand's online presence for lasting success.
+                brand's online presence for lasting success. */}
               </p>
             </div>
           </div>
