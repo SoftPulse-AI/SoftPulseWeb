@@ -69,7 +69,7 @@ const Products = () => {
 
   return (
     <section id="products" className="py-20 relative">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Healthcare <span className="gradient-text">Products</span>
@@ -91,52 +91,52 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
           {products.map((product, index) => (
             <Card 
               key={index} 
               className="glass-card border-white/10 hover-lift group cursor-pointer overflow-hidden relative"
             >
-              <CardHeader className="relative">
-                <div className="flex items-start justify-between mb-4">
+              <CardHeader className="relative pb-3">
+                <div className="flex items-start justify-between mb-2">
                   <div 
-                    className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl flex items-center justify-center group-hover:glow-accent transition-all duration-300`}
+                    className={`w-10 h-10 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center group-hover:glow-accent transition-all duration-300`}
                   >
-                    <div className="text-white">
+                    <div className="text-white text-sm">
                       {product.icon}
                     </div>
                   </div>
                   <Badge 
                     variant="secondary" 
-                    className="glass-card border-white/20 text-accent"
+                    className="glass-card border-white/20 text-accent text-xs px-2 py-1"
                   >
                     {product.badge}
                   </Badge>
                 </div>
-                <CardTitle className="text-xl text-foreground">{product.name}</CardTitle>
+                <CardTitle className="text-sm font-semibold text-foreground leading-tight">{product.name}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-foreground/70 mb-6 leading-relaxed">
+              <CardContent className="pt-0">
+                <CardDescription className="text-xs text-foreground mb-3 leading-tight line-clamp-2">
                   {product.description}
                 </CardDescription>
                 
-                <div className="space-y-3 mb-6">
-                  {product.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-foreground/60">
-                      <Star className="w-3 h-3 text-accent mr-2" />
+                <div className="space-y-1 mb-3">
+                  {product.features.slice(0, 2).map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-xs text-foreground">
+                      <Star className="w-2 h-2 text-accent mr-1" />
                       {feature}
                     </div>
                   ))}
                 </div>
 
                <Button
-  style={{ marginTop: "5px" }}
+  size="sm"
   variant="outline"
-  className="w-full glass-card border-white/20 hover:border-accent/50 group"
-  onClick={() => navigate("/products")} // <-- Add this line
+  className="w-full glass-card border-white/20 hover:border-accent/50 group text-xs py-1"
+  onClick={() => navigate("/products")}
 >
   Learn More
-  <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+  <ExternalLink className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform" />
 </Button>
 
               </CardContent>

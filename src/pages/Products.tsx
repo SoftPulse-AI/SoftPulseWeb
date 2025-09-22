@@ -160,7 +160,7 @@ const Products = () => {
         
         <div className="pt-20 relative z-10">
           {/* Header */}
-          <div className="container mx-auto px-6 py-12">
+          <div className="container mx-auto px-2 py-12">
             <div className="text-center mb-12">
               <div className="relative mb-12">
                 <img 
@@ -182,7 +182,7 @@ const Products = () => {
           </div>
 
           {/* Product Interface */}
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-2">
             <div className="flex flex-col lg:flex-row gap-8 min-h-[600px]">
               {/* Sidebar */}
               <div className="lg:w-1/3">
@@ -317,7 +317,7 @@ const Products = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="container mx-auto px-6 py-20">
+          <div className="container mx-auto px-2 py-20">
             <Card className="glass-card border-white/10 text-center">
               <CardContent className="p-12">
                 <h2 className="text-3xl font-bold gradient-text mb-4">

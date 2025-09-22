@@ -1,17 +1,68 @@
-# Allow all crawlers full access
+# Robots.txt for SoftpulseAI Technologies
+# https://softpulseai.in
+
+# Allow all search engines to crawl the entire site
 User-agent: *
 Allow: /
 
-# Sitemap location for easy discovery by search engines
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Block problematic bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Block access to sensitive areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /yarn.lock
+Disallow: /bun.lockb
+
+# Allow important files
+Allow: /favicon.ico
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /og-image.jpg
+Allow: /logo.png
+
+# Sitemap location
 Sitemap: https://softpulseai.in/sitemap.xml
 
-# Optional: Crawl delay (uncomment if your server needs it)
-# Crawl-delay: 5
-
-# Optional: Block sensitive or non-public folders if any
-# Disallow: /admin/
-# Disallow: /private/
-
-# Optional: Block specific bots if needed (example)
-# User-agent: BadBot
-# Disallow: /
+# Additional sitemaps (if you have multiple)
+# Sitemap: https://softpulseai.in/sitemap-images.xml
+# Sitemap: https://softpulseai.in/sitemap-news.xml

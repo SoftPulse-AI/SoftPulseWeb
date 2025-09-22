@@ -15,10 +15,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>SoftpulseAI Technologies - Leading IT Solutions | Custom Software, AI, Healthcare, Mobile Apps</title>
-        <meta name="description" content="SoftpulseAI Technologies LLP - Leading IT solutions provider in India. Expert in custom software development, AI automation, healthcare technology, mobile apps, web development, WhatsApp marketing, and digital transformation services." />
-        <meta name="keywords" content="SoftpulseAI, SoftpulseAI Technologies, Softpulse, custom software development, AI solutions automation, healthcare technology, mobile app development, web development design, WhatsApp SMS chatbot marketing, digital marketing, IT outsourcing support, dashboard analytics development, healthcare solutions, AI automation, custom software, digital transformation, India IT company" />
-        <meta name="author" content="SoftpulseAI Technologies LLP" />
+        <title>SoftpulseAI Technologies - #1 AI Solutions & Custom Software Development Company in India | Healthcare HIS/CMS, Mobile Apps</title>
+        <meta name="description" content="#1 IT solutions provider in India. Expert in custom software development, AI automation, healthcare technology (HIS/CMS), mobile apps, web development, WhatsApp marketing, and digital transformation. 100+ successful projects, 80+ happy clients. Free consultation available." />
+        <meta name="keywords" content="SoftpulseAI, SoftpulseAI Technologies, Softpulse, custom software development India, AI solutions automation, healthcare technology, hospital information system HIS, clinic management system CMS, mobile app development, web development design, WhatsApp SMS chatbot marketing, digital marketing, IT outsourcing support, dashboard analytics development, AI automation, digital transformation, India IT company, software development company, AI company India, healthcare software, MedPulse, SoftPulse, DocPulse, PatientPulse, best IT company India, top software development company, AI automation services, healthcare IT solutions, custom web development, mobile app development company, digital marketing services, WhatsApp business API, chatbot development, business intelligence dashboard, IT consulting services" />
+        <meta name="author" content="SoftpulseAI Technologies" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="SoftpulseAI Technologies - Leading IT Solutions | Custom Software, AI, Healthcare" />
         <meta property="og:description" content="Transform your business with our innovative digital solutions. Expert in custom software development, AI automation, healthcare technology, and mobile app development." />
@@ -33,7 +33,7 @@ const Index = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": ["Organization", "TechnologyCompany"],
-            "name": "SoftpulseAI Technologies LLP",
+            "name": "SoftpulseAI Technologies",
             "alternateName": ["SoftpulseAI", "Softpulse"],
             "description": "Leading IT solutions provider specializing in custom software development, AI automation, healthcare technology, mobile app development, web development, WhatsApp marketing, and digital transformation services",
             "url": "https://softpulseai.in",
@@ -88,13 +88,13 @@ const Index = () => {
           
           {/* How We Help You Grow Section */}
           <section className="py-20 relative">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-2">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
                   How We Help You Grow — More Than Just Technology
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  We're not here to simply write code. We're here to transform how you operate, engage, and scale.
+                  We're not here to simply write code. We're here to transform how you operate, engage, and scale. As India's leading custom software development and AI solutions company, we deliver measurable results that drive business growth.
                 </p>
               </div>
               
@@ -143,8 +143,71 @@ const Index = () => {
          
             </div>
           </section>
+
+          {/* SEO-Optimized Company Expertise Section */}
+          <section className="py-20 relative bg-gradient-to-br from-primary/5 to-accent/5">
+            <div className="container mx-auto px-2">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
+                  Why Choose SoftpulseAI Technologies?
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+                  As India's premier custom software development and AI solutions company, we specialize in healthcare technology, mobile app development, and digital transformation services that deliver exceptional ROI.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <Card className="glass-card hover-lift border-primary/10">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center mb-4">
+                      <Target className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">Healthcare Technology Experts</h3>
+                    <p className="text-muted-foreground mb-4">Specialized in Hospital Information Systems (HIS), Clinic Management Systems (CMS), and AI-powered healthcare solutions that improve patient care and operational efficiency.</p>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• SoftPulse HIS - Complete hospital management</li>
+                      <li>• MedPulse CMS - Clinic operations</li>
+                      <li>• DocPulse - Doctor scheduling</li>
+                      <li>• PatientPulse - Patient engagement</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="glass-card hover-lift border-primary/10">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center mb-4">
+                      <Zap className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">AI & Automation Solutions</h3>
+                    <p className="text-muted-foreground mb-4">Cutting-edge AI automation, machine learning, and intelligent systems that streamline operations and boost productivity across industries.</p>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• AI-powered chatbots and virtual assistants</li>
+                      <li>• Predictive analytics and business intelligence</li>
+                      <li>• Process automation and workflow optimization</li>
+                      <li>• Machine learning model development</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="glass-card hover-lift border-primary/10">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center mb-4">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">Proven Track Record</h3>
+                    <p className="text-muted-foreground mb-4">100+ successful projects, 80+ happy clients, and 98% success rate across healthcare, e-commerce, real estate, and enterprise sectors.</p>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• 5+ years of industry experience</li>
+                      <li>• 100+ completed projects</li>
+                      <li>• 80+ satisfied clients</li>
+                      <li>• 98% project success rate</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </section>
           
-        
           <Services />
           <Products />
           <Contact />

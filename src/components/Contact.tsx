@@ -91,7 +91,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Get In <span className="gradient-text">Touch</span>

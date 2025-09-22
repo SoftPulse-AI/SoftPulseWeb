@@ -71,7 +71,7 @@ const Services = () => {
 
   return (
     <section id="services" className="py-20 relative">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our <span className="gradient-text">Core Expertise</span>
@@ -81,40 +81,40 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3">
           {services.map((service, index) => (
             <Card 
               key={index} 
               className="glass-card border-white/10 hover-lift group cursor-pointer"
             >
-              <CardHeader>
-                <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:glow-primary transition-all duration-300">
-                  <div className="text-primary-foreground">
+              <CardHeader className="pb-3">
+                <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center mb-2 group-hover:glow-primary transition-all duration-300">
+                  <div className="text-primary-foreground text-sm">
                     {service.icon}
                   </div>
                 </div>
-                <CardTitle className="text-lg text-foreground">{service.title}</CardTitle>
+                <CardTitle className="text-sm font-semibold text-foreground leading-tight">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-foreground/70 mb-4 leading-relaxed">
+              <CardContent className="pt-0">
+                <CardDescription className="text-xs text-foreground mb-3 leading-tight line-clamp-2">
                   {service.description}
                 </CardDescription>
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-foreground/60">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full mr-2"></div>
+                <ul className="space-y-1 mb-3">
+                  {service.features.slice(0, 2).map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-xs text-foreground">
+                      <div className="w-1 h-1 bg-accent rounded-full mr-1"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
                <Button
-  style={{ marginTop: "5px" }}
+  size="sm"
   variant="outline"
-  className="w-full glass-card border-white/20 hover:border-accent/50 group"
-  onClick={() => navigate("/services")} // <-- Add this line
+  className="w-full glass-card border-white/20 hover:border-accent/50 group text-xs py-1"
+  onClick={() => navigate("/services")}
 >
   Learn More
-  <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+  <ExternalLink className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform" />
 </Button>
               </CardContent>
             </Card>

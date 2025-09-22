@@ -50,7 +50,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 relative">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2">
         {/* Company Overview */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">

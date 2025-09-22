@@ -26,9 +26,12 @@ const ScrollToTop = () => {
   };
 
   return (
-    <div className={`fixed bottom-8 right-8 z-50 transition-all duration-300 ${
-      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-    }`}>
+    <div className={`fixed transition-all duration-300 z-20 
+      sm:bottom-8 sm:right-24 
+      bottom-24 right-6 
+      ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+      }`}>
       <Button
         onClick={scrollToTop}
         variant="default"

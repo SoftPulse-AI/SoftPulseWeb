@@ -83,7 +83,7 @@ const About = () => {
         
         <div className="pt-20 relative z-10">
           {/* Hero Section */}
-          <div className="container mx-auto px-6 py-12">
+          <div className="container mx-auto px-2 py-12">
             <div className="text-center mb-16">
               <div className="relative mb-12">
                 <img 
@@ -108,12 +108,12 @@ const About = () => {
           </div>
 
           {/* Company Overview */}
-          <div className="container mx-auto px-6 mb-20">
+          <div className="container mx-auto px-2 mb-20">
             <Card className="glass-card border-white/10">
               <CardContent className="p-8 md:p-12">
                 <h2 className="text-3xl font-bold gradient-text mb-6">Who We Are</h2>
                 <p className="text-lg text-foreground/80 leading-relaxed mb-6">
-                  SoftpulseAI Technologies LLP is a forward-thinking solutions partner fueled by innovation, 
+                  SoftpulseAI Technologies is a forward-thinking solutions partner fueled by innovation, 
                   integrity, and a commitment to excellence. Our passionate team of technology experts empowers 
                   organizations across diverse industries to grow smarter, faster, and more sustainably — crafting 
                   bespoke software, AI-driven automation, responsive websites, engaging mobile apps, and insightful 
@@ -129,7 +129,7 @@ const About = () => {
           </div>
 
           {/* Our Story */}
-          <div className="container mx-auto px-6 mb-20">
+          <div className="container mx-auto px-2 mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold gradient-text mb-4">Our Story — From a Spark to a Revolution</h2>
               <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
@@ -186,7 +186,7 @@ const About = () => {
           </div>
 
           {/* Vision & Mission */}
-          <div className="container mx-auto px-6 mb-20">
+          <div className="container mx-auto px-2 mb-20">
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="glass-card border-white/10">
                 <CardContent className="p-8">
@@ -218,7 +218,7 @@ const About = () => {
           </div>
 
           {/* Core Values */}
-          <div className="container mx-auto px-6 mb-20">
+          <div className="container mx-auto px-2 mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold gradient-text mb-4">Our Core Values</h2>
               <p className="text-lg text-foreground/80">
@@ -246,7 +246,7 @@ const About = () => {
     
 
           {/* Team */}
-          <div className="container mx-auto px-6 mb-20">
+          <div className="container mx-auto px-2 mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold gradient-text mb-4">Our Team</h2>
               <p className="text-lg text-foreground/80">
@@ -268,7 +268,7 @@ const About = () => {
           </div>
 
           {/* Achievements */}
-          <div className="container mx-auto px-6 mb-20">
+          <div className="container mx-auto px-2 mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold gradient-text mb-4">Our Achievements</h2>
               <p className="text-lg text-foreground/80">
@@ -293,7 +293,7 @@ const About = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="container mx-auto px-6 py-20">
+          <div className="container mx-auto px-2 py-20">
             <Card className="glass-card border-white/10 text-center">
               <CardContent className="p-12">
                 <h2 className="text-3xl font-bold gradient-text mb-4">

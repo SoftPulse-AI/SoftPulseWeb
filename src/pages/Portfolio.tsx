@@ -113,24 +113,31 @@ const Portfolio = () => {
 
   const testimonials = [
     {
-      name: "Dr. Rajesh Kumar",
-      role: "Hospital Director",
-      company: "Apollo Medical Center",
-      content: "SoftpulseAI delivered an exceptional HIS that transformed our operations. The system is intuitive, robust, and has significantly improved our efficiency.",
+      name: "Raghavan Rai",
+      role: "Founder",
+      company: "CEPL",
+      content: "SoftpulseAI delivered an exceptional web development solution that transformed our operations. The system is intuitive, robust, and has significantly improved our efficiency.",
       rating: 5
     },
     {
-      name: "Priya Sharma",
-      role: "E-commerce Manager",
-      company: "ShopEasy Pvt Ltd",
-      content: "The marketplace platform exceeded our expectations. Sales increased by 300% within 6 months of implementation.",
+      name: "Pawan Sharma",
+      role: "Founder",
+      company: "Pawan Hospital",
+      content: "The healthcare management system exceeded our expectations. Patient care improved dramatically with the implementation of their HIS solution.",
       rating: 5
     },
     {
-      name: "Amit Patel",
-      role: "Real Estate Developer",
-      company: "Prime Properties",
-      content: "The property management system streamlined our entire sales process. Lead conversion improved dramatically.",
+      name: "Amritpal",
+      role: "Hospital Administrator",
+      company: "GNMGH Hospital",
+      content: "The hospital management system streamlined our entire operations. Patient processing and administrative efficiency improved dramatically.",
+      rating: 5
+    },
+    {
+      name: "Dheeraj Sharma",
+      role: "Founder",
+      company: "Cubic Mantra",
+      content: "SoftpulseAI's AI solutions have revolutionized our business processes. The automation and intelligence integration exceeded our expectations.",
       rating: 5
     }
   ];
@@ -149,7 +156,7 @@ const Portfolio = () => {
         
         <div className="pt-20 relative z-10">
           {/* Header */}
-          <div className="container mx-auto px-6 py-12">
+          <div className="container mx-auto px-2 py-12">
             <div className="text-center mb-12">
               <div className="relative mb-12">
                 <img 
@@ -183,7 +190,7 @@ const Portfolio = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="container mx-auto px-6 mb-20">
+          <div className="container mx-auto px-2 mb-20">
             <h2 className="text-3xl font-bold text-center mb-12 gradient-text">Featured Projects</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => {
@@ -234,13 +241,6 @@ const Portfolio = () => {
                         </div>
                       </div>
                       
-                      <Button 
-                        variant="outline" 
-                        className="w-full mt-4 group-hover:bg-primary/10 group-hover:border-primary/30"
-                      >
-                        View Details
-                        <ExternalLink className="w-4 h-4 ml-2" />
-                      </Button>
                     </CardContent>
                   </Card>
                 );
@@ -249,9 +249,9 @@ const Portfolio = () => {
           </div>
 
           {/* Testimonials */}
-          <div className="container mx-auto px-6 mb-20">
+          <div className="container mx-auto px-2 mb-20">
             <h2 className="text-3xl font-bold text-center mb-12 gradient-text">Client Testimonials</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {testimonials.map((testimonial, index) => (
                 <Card key={index} className="glass-card border-white/10">
                   <CardContent className="p-6">
@@ -273,7 +273,7 @@ const Portfolio = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="container mx-auto px-6 py-20">
+          <div className="container mx-auto px-2 py-20">
             <Card className="glass-card border-white/10 text-center">
               <CardContent className="p-12">
                 <h2 className="text-3xl font-bold gradient-text mb-4">
@@ -284,11 +284,11 @@ const Portfolio = () => {
                   Let's discuss your project and create something amazing together.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="gradient-primary hover:shadow-primary">
+                  <Button size="lg" className="gradient-primary hover:shadow-primary" onClick={() => window.location.href = '/contact'}>
                     Start Your Project
                   </Button>
-                  <Button size="lg" variant="outline">
-                    View Case Studies
+                  <Button size="lg" variant="outline" onClick={() => window.location.href = '/contact'}>
+                    Contact Us
                   </Button>
                 </div>
               </CardContent>

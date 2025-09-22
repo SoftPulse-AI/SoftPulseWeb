@@ -18,17 +18,17 @@
     --popover: 220 13% 98%;
     --popover-foreground: 220 13% 18%;
 
-    /* Brand Colors - Modern Blue Palette */
-    --primary: 219 78% 58%;
+    /* Brand Colors - Logo-Inspired Teal to Purple Gradient */
+    --primary: 180 100% 50%; /* Bright teal from logo */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 219 78% 68%;
+    --primary-glow: 180 100% 60%;
     
     --secondary: 220 13% 91%;
     --secondary-foreground: 220 13% 18%;
     
-    --accent: 187 85% 53%;
+    --accent: 300 100% 70%; /* Bright purple/magenta from logo */
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 187 85% 63%;
+    --accent-glow: 300 100% 80%;
 
     /* Status Colors */
     --success: 142 76% 36%;
@@ -40,17 +40,19 @@
 
     /* Neutral Colors */
     --muted: 220 13% 95%;
-    --muted-foreground: 220 13% 45%;
+    --muted-foreground: 220 13% 20%;
     --border: 220 13% 91%;
     --input: 220 13% 95%;
     --ring: 219 78% 58%;
 
-    /* Design System Extensions */
+    /* Design System Extensions - Logo-Inspired Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
     --gradient-surface: linear-gradient(135deg, hsl(var(--surface)), hsl(var(--surface-elevated)));
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 13% 98%));
     --gradient-card: linear-gradient(135deg, hsl(220 13% 98%), hsl(220 13% 96%));
-    --gradient-card-hover: linear-gradient(135deg, hsl(219 78% 98%), hsl(187 85% 95%));
+    --gradient-card-hover: linear-gradient(135deg, hsl(180 85% 98%), hsl(300 85% 98%));
+    --gradient-logo: linear-gradient(135deg, hsl(180 85% 45%), hsl(300 85% 60%));
+    --gradient-logo-subtle: linear-gradient(135deg, hsl(180 85% 95%), hsl(300 85% 95%));
     
     /* Shadows & Effects - Enhanced card shadows */
     --shadow-primary: 0 8px 32px hsl(var(--primary) / 0.3);
@@ -85,28 +87,28 @@
   }
 
   .dark {
-    /* Dark Mode - Blue gradient theme */
-    --background: 222 47% 8%;
+    /* Dark Mode - Neutral dark theme */
+    --background: 220 27% 4%;
     --foreground: 210 40% 98%;
-    --surface: 222 47% 10%;
-    --surface-elevated: 222 47% 12%;
+    --surface: 220 27% 6%;
+    --surface-elevated: 220 27% 8%;
 
-    --card: 222 47% 10%;
+    --card: 220 27% 6%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 10%;
+    --popover: 220 27% 6%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 219 78% 68%;
+    --primary: 180 100% 60%; /* Bright teal for dark mode */
     --primary-foreground: 222 47% 8%;
-    --primary-glow: 219 78% 78%;
+    --primary-glow: 180 100% 70%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
-    --accent: 187 85% 63%;
+    --accent: 300 100% 80%; /* Bright purple/magenta for dark mode */
     --accent-foreground: 222 47% 8%;
-    --accent-glow: 187 85% 73%;
+    --accent-glow: 300 100% 90%;
 
     --success: 142 76% 46%;
     --success-foreground: 210 40% 98%;
@@ -116,18 +118,20 @@
     --destructive-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted-foreground: 210 40% 90%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 219 78% 68%;
 
-    /* Dark mode gradients */
+    /* Dark mode gradients - Logo-Inspired */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
     --gradient-surface: linear-gradient(135deg, hsl(var(--surface)), hsl(var(--surface-elevated)));
     --gradient-hero: linear-gradient(135deg, hsl(222 47% 8%), hsl(222 47% 12%));
     --gradient-card: linear-gradient(135deg, hsl(222 47% 10%), hsl(222 47% 12%));
-    --gradient-card-hover: linear-gradient(135deg, hsl(219 78% 15%), hsl(187 85% 15%));
+    --gradient-card-hover: linear-gradient(135deg, hsl(180 85% 15%), hsl(300 85% 15%));
+    --gradient-logo: linear-gradient(135deg, hsl(180 85% 55%), hsl(300 85% 70%));
+    --gradient-logo-subtle: linear-gradient(135deg, hsl(180 85% 10%), hsl(300 85% 10%));
     
     /* Dark mode shadows */
     --shadow-card: 0 4px 16px hsl(222 47% 4% / 0.3);
@@ -150,7 +154,11 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    background: var(--gradient-hero);
+    background: linear-gradient(135deg, hsl(220 27% 4%), hsl(240 10% 8%));
+  }
+
+  .light body {
+    background: linear-gradient(135deg, hsl(180 8% 98%), hsl(300 8% 98%));
   }
 
   /* Custom utility classes */
@@ -263,7 +271,16 @@
 
   .glass-card {
     @apply backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .light .glass-card {
+    background: linear-gradient(135deg, 
+      rgba(34, 211, 238, 0.08), 
+      rgba(168, 85, 247, 0.08)
+    );
+    border: 1px solid rgba(34, 211, 238, 0.25);
+    box-shadow: 0 4px 16px rgba(34, 211, 238, 0.15);
   }
 
   .dark .glass-card {
@@ -273,39 +290,39 @@
   .card-enhanced {
     @apply backdrop-blur-md border shadow-card transition-smooth;
     background: linear-gradient(135deg, 
-      rgba(219, 234, 254, 0.8), 
-      rgba(147, 197, 253, 0.6)
+      rgba(34, 211, 238, 0.12), 
+      rgba(168, 85, 247, 0.12)
     );
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    box-shadow: 0 6px 20px rgba(34, 211, 238, 0.18);
   }
 
   .dark .card-enhanced {
     background: linear-gradient(135deg, 
-      rgba(30, 41, 59, 0.8), 
-      rgba(51, 65, 85, 0.6)
+      rgba(34, 211, 238, 0.03), 
+      rgba(168, 85, 247, 0.03)
     );
-    border: 1px solid rgba(148, 163, 184, 0.2);
+    border: 1px solid rgba(34, 211, 238, 0.15);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
   .card-enhanced:hover {
     @apply -translate-y-1;
     background: linear-gradient(135deg, 
-      rgba(219, 234, 254, 0.9), 
-      rgba(147, 197, 253, 0.8)
+      rgba(34, 211, 238, 0.18), 
+      rgba(168, 85, 247, 0.18)
     );
-    border: 1px solid rgba(59, 130, 246, 0.5);
-    box-shadow: 0 16px 48px rgba(59, 130, 246, 0.25);
+    border: 1px solid rgba(34, 211, 238, 0.4);
+    box-shadow: 0 12px 32px rgba(34, 211, 238, 0.25);
   }
 
   .dark .card-enhanced:hover {
     background: linear-gradient(135deg, 
-      rgba(30, 41, 59, 0.9), 
-      rgba(51, 65, 85, 0.8)
+      rgba(34, 211, 238, 0.05), 
+      rgba(168, 85, 247, 0.05)
     );
-    border: 1px solid rgba(148, 163, 184, 0.4);
-    box-shadow: 0 16px 48px rgba(219, 78, 168, 0.2);
+    border: 1px solid rgba(34, 211, 238, 0.25);
+    box-shadow: 0 16px 48px rgba(34, 211, 238, 0.1);
   }
 
   /* Custom cursor */
@@ -334,6 +351,19 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent;
   }
+
+  .gradient-logo {
+    background: var(--gradient-logo);
+  }
+
+  .gradient-logo-subtle {
+    background: var(--gradient-logo-subtle);
+  }
+
+  .gradient-logo-text {
+    @apply bg-gradient-to-r from-cyan-600 to-purple-600 bg-clip-text text-transparent;
+  }
+
 }

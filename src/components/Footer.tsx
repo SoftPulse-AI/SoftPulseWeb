@@ -1,14 +1,20 @@
 import { Link } from 'react-router-dom';
+import logo from '@/assets/Circle.png';
 
 const Footer = () => {
   return (
     <footer className="border-t border-primary/10 py-12 mt-20 bg-background">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 gradient-primary rounded-lg"></div>
-              <span className="text-xl font-bold gradient-text">SoftpulseAI Technologies LLP</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src={logo} 
+                alt="SoftpulseAI Logo" 
+             
+                style={{ opacity: 1,width: '3em', height: '3.5em' }}
+              />
+              <span className="text-xl font-bold gradient-text">SoftpulseAI Technologies</span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               Leading IT solutions provider specializing in custom software development, AI automation, healthcare technology, and digital transformation services.
@@ -59,7 +65,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-primary/10 pt-6 text-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 SoftpulseAI Technologies LLP. All rights reserved. Building the future of technology.
+            © 2024 SoftpulseAI Technologies. All rights reserved. Building the future of technology.
           </p>
         </div>
       </div>

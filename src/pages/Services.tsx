@@ -186,9 +186,83 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>IT Services - SoftpulseAI Technologies</title>
-        <meta name="description" content="Comprehensive IT services including custom software development, mobile apps, AI solutions, digital marketing, and healthcare technology solutions." />
-        <meta name="keywords" content="IT services, software development, mobile app development, AI solutions, digital marketing, healthcare technology" />
+        <title>IT Services & Digital Solutions - SoftpulseAI Technologies | Custom Software, AI, Healthcare</title>
+        <meta name="description" content="Comprehensive IT services in India: custom software development, mobile app development, AI automation, healthcare technology (HIS/CMS), digital marketing, WhatsApp business API, and IT outsourcing. 100+ successful projects." />
+        <meta name="keywords" content="IT services India, custom software development, mobile app development, AI solutions automation, healthcare technology, hospital information system HIS, clinic management system CMS, digital marketing, WhatsApp business API, chatbot development, IT outsourcing, business intelligence dashboard, AI automation services, healthcare IT solutions, custom web development, mobile app development company, digital marketing services, software development company India, AI company India, healthcare software, MedPulse, SoftPulse, DocPulse, PatientPulse, IT consulting services, technology solutions, digital transformation" />
+        <meta name="author" content="SoftpulseAI Technologies LLP" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://softpulseai.in/services" />
+        <meta property="og:title" content="IT Services & Digital Solutions - SoftpulseAI Technologies" />
+        <meta property="og:description" content="Comprehensive IT services: custom software development, AI automation, healthcare technology, mobile apps, digital marketing, and IT outsourcing. 100+ successful projects." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softpulseai.in/services" />
+        <meta property="og:image" content="https://softpulseai.in/services-hero.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="IT Services & Digital Solutions - SoftpulseAI Technologies" />
+        <meta name="twitter:description" content="Comprehensive IT services: custom software development, AI automation, healthcare technology, mobile apps, digital marketing, and IT outsourcing." />
+        <meta name="twitter:image" content="https://softpulseai.in/services-hero.webp" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "IT Services & Digital Solutions",
+            "description": "Comprehensive IT services including custom software development, mobile app development, AI automation, healthcare technology, digital marketing, and IT outsourcing",
+            "provider": {
+              "@type": "Organization",
+              "name": "SoftpulseAI Technologies LLP",
+              "url": "https://softpulseai.in"
+            },
+            "serviceType": "IT Services",
+            "areaServed": "Worldwide",
+            "offers": {
+              "@type": "Offer",
+              "description": "Custom software development, AI solutions, mobile apps, healthcare technology, digital marketing services",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "IT Services Catalog",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom Software Development"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mobile App Development"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Solutions & Automation"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Healthcare Technology Solutions"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Digital Marketing Services"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
       
       <div className="min-h-screen bg-background relative">
@@ -197,7 +271,7 @@ const Services = () => {
         
         <div className="pt-20 relative z-10">
           {/* Header */}
-          <div className="container mx-auto px-6 py-12">
+          <div className="container mx-auto px-2 py-12">
             <div className="text-center mb-12">
               <div className="relative mb-12">
                 <img 
@@ -219,7 +293,7 @@ const Services = () => {
           </div>
 
           {/* Services Interface */}
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-2">
             <div className="flex flex-col lg:flex-row gap-8 min-h-[600px]">
               {/* Sidebar */}
               <div className="lg:w-1/3">
@@ -357,7 +431,7 @@ const Services = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="container mx-auto px-6 py-20">
+          <div className="container mx-auto px-2 py-20">
             <Card className="glass-card border-white/10 text-center">
               <CardContent className="p-12">
                 <h2 className="text-3xl font-bold gradient-text mb-4">

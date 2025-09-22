@@ -77,7 +77,7 @@ const DocPulse = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="gradient-primary mb-6">
               <Stethoscope className="w-4 h-4 mr-2" />
@@ -105,7 +105,7 @@ const DocPulse = () => {
 
       {/* Features Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Complete <span className="gradient-text">Doctor Solutions</span>
@@ -151,7 +151,7 @@ const DocPulse = () => {
 
       {/* Benefits Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Why Doctors Choose <span className="gradient-text">DocPulse</span>
@@ -173,7 +173,7 @@ const DocPulse = () => {
 
       {/* Stats Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center glass-card p-8 rounded-2xl">
               <div className="text-4xl font-bold gradient-text mb-2">40%</div>
@@ -197,7 +197,7 @@ const DocPulse = () => {
 
       {/* CTA Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2">
           <div className="glass-card p-12 rounded-2xl max-w-4xl mx-auto text-center">
             <h3 className="text-3xl font-bold mb-6">
               Ready to Enhance Your <span className="gradient-text">Medical Practice?</span>

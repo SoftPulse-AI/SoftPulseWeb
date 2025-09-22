@@ -42,6 +42,11 @@ export default {
 					foreground: 'hsl(var(--accent-foreground))',
 					glow: 'hsl(var(--accent-glow))'
 				},
+				// Logo-inspired gradient colors
+				'logo-teal': 'hsl(180 85% 45%)',
+				'logo-purple': 'hsl(300 85% 60%)',
+				'logo-cyan': 'hsl(180 85% 55%)',
+				'logo-magenta': 'hsl(300 85% 70%)',
 				success: {
 					DEFAULT: 'hsl(var(--success))',
 					foreground: 'hsl(var(--success-foreground))'

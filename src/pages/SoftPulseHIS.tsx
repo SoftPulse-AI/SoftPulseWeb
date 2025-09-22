@@ -66,7 +66,7 @@ const SoftPulseHIS = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="gradient-primary mb-6">Complete HIS Solution</Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -92,7 +92,7 @@ const SoftPulseHIS = () => {
 
       {/* Unified Platform Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               SoftPulse: One Unified Platform for All Your <span className="gradient-text">Hospital Management Needs</span>
@@ -129,7 +129,7 @@ const SoftPulseHIS = () => {
 
       {/* Why Choose Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Why Choose <span className="gradient-text">SoftPulse HIS</span>
@@ -151,7 +151,7 @@ const SoftPulseHIS = () => {
 
       {/* CTA Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2">
           <div className="glass-card p-12 rounded-2xl max-w-4xl mx-auto text-center">
             <h3 className="text-3xl font-bold mb-6">
               Ready to Transform Your <span className="gradient-text">Hospital Operations?</span>

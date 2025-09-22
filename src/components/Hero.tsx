@@ -15,7 +15,7 @@ const injectMobileMarginCSS = () => {
       }
       @media screen and (max-width: 767px) {
         .mt-mobile {
-          margin-top: 80px;
+          margin-top: 100 px;
         }
       }
     `;
@@ -43,7 +43,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 to-white/70"></div>
       </div> */}
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-2 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 text-center lg:text-left space-y-8 slide-up">
             {/* Badge */}
@@ -105,10 +105,10 @@ const Hero = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20 max-w-6xl mx-auto">
           <div className="glass-card p-6 rounded-xl hover-lift border-primary/10">
-            <div className="text-3xl font-bold gradient-text mb-2">N+</div>
-            <div className="text-muted-foreground">Hospitals Using Our Systems</div>
+            <div className="text-3xl font-bold gradient-text mb-2">50+</div>
+            <div className="text-muted-foreground">Projects Delivered</div>
           </div>
           <div className="glass-card p-6 rounded-xl hover-lift border-primary/10">
             <div className="text-3xl font-bold gradient-text mb-2">10+</div>
@@ -117,6 +117,10 @@ const Hero = () => {
           <div className="glass-card p-6 rounded-xl hover-lift border-primary/10">
             <div className="text-3xl font-bold gradient-text mb-2">100%</div>
             <div className="text-muted-foreground">Client Satisfaction</div>
+          </div>
+          <div className="glass-card p-6 rounded-xl hover-lift border-primary/10">
+            <div className="text-3xl font-bold gradient-text mb-2">24/7</div>
+            <div className="text-muted-foreground">Support Available</div>
           </div>
         </div>
       </div>

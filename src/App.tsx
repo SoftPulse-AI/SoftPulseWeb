@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import ScrollToTop from "@/components/ScrollToTop";
 import { useEffect } from "react";
 import FloatingShapes from "@/components/FloatingShapes";
+import Chatbot from "@/components/Chatbot";
 
 const ScrollToTopOnRouteChange = () => {
   const { pathname } = useLocation();
@@ -80,7 +81,7 @@ const App = () => (
 
             <Route path="*" element={<NotFound />} />
           </Routes>
-          
+          <Chatbot />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

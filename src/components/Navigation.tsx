@@ -44,18 +44,25 @@ const Navigation = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-smooth",
         isScrolled
-          ? "glass-card border-b border-primary/10 backdrop-blur-xl bg-background/80"
+          ? "bg-background/80 backdrop-blur-xl border-b border-primary/10"
           : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-2" >
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="SoftpulseAI Logo" className="w-8 h-8 rounded-lg" />
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="relative">
+              <img 
+                src={logo} 
+                alt="SoftpulseAI Logo" 
+                className="relative rounded-lg p-2" 
+                style={{width: '55px', height: '70px'}} 
+              />
+            </div>
             <span className="flex flex-col leading-none">
               <span className="text-xl font-bold gradient-text">SOFTPULSEAI</span>
-              <span className="text-xs text-gray-500 tracking-wider">TECHNOLOGIES</span>
+              <span className="text-xs text-muted-foreground tracking-wider">TECHNOLOGIES</span>
             </span>
           </Link>
 
