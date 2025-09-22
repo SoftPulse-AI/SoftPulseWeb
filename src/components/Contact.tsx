@@ -140,7 +140,7 @@ const Contact = () => {
                   />
                 </div>
 
-                {/* Phone Number */}
+                {/* PhoneNumber */}
                 <div>
                   <label className="text-sm font-medium text-foreground/80 mb-2 block">
                     Phone Number
