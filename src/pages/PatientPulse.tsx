@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Helmet } from "react-helmet";
+import Navigation from "@/components/Navigation";
+import FloatingShapes from "@/components/FloatingShapes";
+import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Footer";
 import { 
   Bell, 
   MessageSquare, 
@@ -13,17 +18,8 @@ import {
   Check,
   Users
 } from "lucide-react";
-import { useEffect } from "react";
 
 const PatientPulse = () => {
-  useEffect(() => {
-    document.title = "PatientPulse - Patient Engagement & Mobile Health App | SoftpulseAI";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'PatientPulse - Mobile health app for patient engagement. Book appointments, access medical records, communicate with providers, and manage your health journey.');
-    }
-  }, []);
-
   const features = [
     { 
       name: "Appointment & Follow-up Reminders", 
@@ -75,7 +71,28 @@ const PatientPulse = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>PatientPulse - Patient Engagement App | SoftpulseAI</title>
+        <meta name="description" content="PatientPulse is a patient engagement app for appointments, reminders, secure chat, and access to prescriptions and records. Improve satisfaction and reduce no-shows." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://softpulseai.com/patientpulse" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softpulseai.com/patientpulse" />
+        <meta property="og:title" content="PatientPulse - Patient Engagement App | SoftpulseAI" />
+        <meta property="og:description" content="Patient engagement app for appointments, reminders, secure chat, and access to prescriptions and records." />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PatientPulse - Patient Engagement App | SoftpulseAI" />
+        <meta name="twitter:description" content="Patient engagement app for appointments, reminders, secure chat, and access to prescriptions and records." />
+        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background relative">
+        <FloatingShapes />
+        <Navigation />
+        <div className="pt-20 relative z-10">
+          <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-2">
@@ -218,7 +235,12 @@ const PatientPulse = () => {
           </div>
         </div>
       </section>
-    </div>
+          </div>
+        </div>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </>
   );
 };
 

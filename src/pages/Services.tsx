@@ -191,16 +191,16 @@ const Services = () => {
         <meta name="keywords" content="IT services India, custom software development, mobile app development, AI solutions automation, healthcare technology, hospital information system HIS, clinic management system CMS, digital marketing, WhatsApp business API, chatbot development, IT outsourcing, business intelligence dashboard, AI automation services, healthcare IT solutions, custom web development, mobile app development company, digital marketing services, software development company India, AI company India, healthcare software, MedPulse, SoftPulse, DocPulse, PatientPulse, IT consulting services, technology solutions, digital transformation" />
         <meta name="author" content="SoftpulseAI Technologies LLP" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://softpulseai.in/services" />
+        <link rel="canonical" href="https://softpulseai.com/services" />
         <meta property="og:title" content="IT Services & Digital Solutions - SoftpulseAI Technologies" />
         <meta property="og:description" content="Comprehensive IT services: custom software development, AI automation, healthcare technology, mobile apps, digital marketing, and IT outsourcing. 100+ successful projects." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://softpulseai.in/services" />
-        <meta property="og:image" content="https://softpulseai.in/services-hero.webp" />
+        <meta property="og:url" content="https://softpulseai.com/services" />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="IT Services & Digital Solutions - SoftpulseAI Technologies" />
         <meta name="twitter:description" content="Comprehensive IT services: custom software development, AI automation, healthcare technology, mobile apps, digital marketing, and IT outsourcing." />
-        <meta name="twitter:image" content="https://softpulseai.in/services-hero.webp" />
+        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -210,7 +210,7 @@ const Services = () => {
             "provider": {
               "@type": "Organization",
               "name": "SoftpulseAI Technologies LLP",
-              "url": "https://softpulseai.in"
+              "url": "https://softpulseai.com"
             },
             "serviceType": "IT Services",
             "areaServed": "Worldwide",

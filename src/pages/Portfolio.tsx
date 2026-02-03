@@ -148,6 +148,17 @@ const Portfolio = () => {
         <title>Portfolio - SoftpulseAI Technologies</title>
         <meta name="description" content="Explore our portfolio of successful projects across healthcare, e-commerce, real estate, education, and more. See how we've helped businesses transform digitally." />
         <meta name="keywords" content="portfolio, case studies, healthcare software, e-commerce development, digital transformation, success stories" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://softpulseai.com/portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softpulseai.com/portfolio" />
+        <meta property="og:title" content="Portfolio - SoftpulseAI Technologies" />
+        <meta property="og:description" content="Explore our portfolio of successful projects across healthcare, e-commerce, real estate, education, and more." />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Portfolio - SoftpulseAI Technologies" />
+        <meta name="twitter:description" content="Explore our portfolio of successful projects across healthcare, e-commerce, real estate, education, and more." />
+        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
       </Helmet>
       
       <div className="min-h-screen bg-background relative">

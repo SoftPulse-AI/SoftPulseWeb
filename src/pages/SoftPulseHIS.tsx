@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Helmet } from "react-helmet";
+import Navigation from "@/components/Navigation";
+import FloatingShapes from "@/components/FloatingShapes";
+import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Footer";
 import { 
   Building2, 
   Users, 
@@ -15,17 +20,8 @@ import {
   Check,
   ArrowRight
 } from "lucide-react";
-import { useEffect } from "react";
 
 const SoftPulseHIS = () => {
-  useEffect(() => {
-    document.title = "SoftPulse HIS - Complete Hospital Information System | SoftpulseAI";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'SoftPulse HIS - Comprehensive hospital information system with 18+ integrated modules. Streamline operations, improve patient care, and boost efficiency across all departments.');
-    }
-  }, []);
-
   const modules = [
     { name: "Front Office", icon: <Building2 className="w-6 h-6" />, description: "Patient registration, appointments, and front desk operations" },
     { name: "IPD", icon: <Users className="w-6 h-6" />, description: "Inpatient department management and bed allocation" },
@@ -63,7 +59,28 @@ const SoftPulseHIS = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>SoftPulse HIS - Hospital Information System | SoftpulseAI</title>
+        <meta name="description" content="SoftPulse HIS is a comprehensive hospital information system with 18+ modules. Streamline operations, improve patient care, and boost efficiency across departments." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://softpulseai.com/softpulse-his" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softpulseai.com/softpulse-his" />
+        <meta property="og:title" content="SoftPulse HIS - Hospital Information System | SoftpulseAI" />
+        <meta property="og:description" content="SoftPulse HIS is a comprehensive hospital information system with 18+ modules. Streamline operations, improve patient care, and boost efficiency." />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SoftPulse HIS - Hospital Information System | SoftpulseAI" />
+        <meta name="twitter:description" content="SoftPulse HIS is a comprehensive hospital information system with 18+ modules. Streamline operations, improve patient care, and boost efficiency." />
+        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background relative">
+        <FloatingShapes />
+        <Navigation />
+        <div className="pt-20 relative z-10">
+          <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-2">
@@ -171,7 +188,12 @@ const SoftPulseHIS = () => {
           </div>
         </div>
       </section>
-    </div>
+          </div>
+        </div>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </>
   );
 };
 

@@ -48,14 +48,14 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "info@softpulseai.in",
-      link: "mailto:info@softpulseai.in"
+      value: "info@softpulseai.com",
+      link: "mailto:info@softpulseai.com"
     },
     {
       icon: <Globe className="w-6 h-6" />,
       title: "Website",
-      value: "www.softpulseai.in",
-      link: "https://www.softpulseai.in"
+      value: "softpulseai.com",
+      link: "https://softpulseai.com"
     },
     {
       icon: <MapPin className="w-6 h-6" />,

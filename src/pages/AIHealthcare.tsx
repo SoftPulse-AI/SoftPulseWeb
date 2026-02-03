@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Helmet } from "react-helmet";
+import Navigation from "@/components/Navigation";
+import FloatingShapes from "@/components/FloatingShapes";
+import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Footer";
 import { 
   Brain, 
   FileText, 
@@ -17,17 +22,8 @@ import {
   ArrowRight,
   Sparkles
 } from "lucide-react";
-import { useEffect } from "react";
 
 const AIHealthcare = () => {
-  useEffect(() => {
-    document.title = "AI Healthcare Solutions - Transforming Medicine with Artificial Intelligence | SoftpulseAI";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'AI-powered healthcare solutions including prescription generation, predictive analytics, diagnostic assistance, and patient monitoring. Transform healthcare delivery with advanced AI tools.');
-    }
-  }, []);
-
   const aiSolutions = [
     { 
       name: "AI-Generated Prescriptions", 
@@ -104,78 +100,99 @@ const AIHealthcare = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="container mx-auto px-2">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge className="gradient-primary mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
-              AI Healthcare Solutions
-            </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              AI-Driven Healthcare Innovation: Transforming the <span className="gradient-text">Future of Medicine</span>
-            </h1>
-            <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
-              Our AI-powered healthcare solutions leverage the latest advances in artificial intelligence to automate routine tasks, 
-              enhance clinical decision-making, and improve patient outcomes. From prescription generation to predictive analytics, 
-              our AI tools are transforming healthcare delivery.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="gradient-primary hover:shadow-primary text-lg px-8 py-6">
-                Explore AI Solutions
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button variant="outline" className="text-lg px-8 py-6 glass-card border-white/20">
-                Request Demo
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>AI Healthcare Solutions - SoftpulseAI</title>
+        <meta name="description" content="AI-powered healthcare solutions including prescription generation, predictive analytics, diagnostic assistance, and patient monitoring. Transform healthcare delivery with advanced AI tools." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://softpulseai.com/ai-healthcare" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softpulseai.com/ai-healthcare" />
+        <meta property="og:title" content="AI Healthcare Solutions - SoftpulseAI" />
+        <meta property="og:description" content="AI-powered healthcare solutions including prescription generation, predictive analytics, diagnostic assistance, and patient monitoring." />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Healthcare Solutions - SoftpulseAI" />
+        <meta name="twitter:description" content="AI-powered healthcare solutions including prescription generation, predictive analytics, diagnostic assistance, and patient monitoring." />
+        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
+      </Helmet>
 
-      {/* AI Innovation Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-2">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              AI Innovation in <span className="gradient-text">Healthcare</span>
-            </h2>
-            <p className="text-xl text-foreground/80 max-w-4xl mx-auto">
-              Transform Healthcare with AI features—available separately or easily integrated with your HIS systems.
-            </p>
-          </div>
+      <div className="min-h-screen bg-background relative">
+        <FloatingShapes />
+        <Navigation />
+        <div className="pt-20 relative z-10">
+          <div className="min-h-screen bg-background">
+            {/* Hero Section */}
+            <section className="py-20 relative overflow-hidden">
+              <div className="container mx-auto px-2">
+                <div className="text-center max-w-4xl mx-auto">
+                  <Badge className="gradient-primary mb-6">
+                    <Sparkles className="w-4 h-4 mr-2" />
+                    AI Healthcare Solutions
+                  </Badge>
+                  <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                    AI-Driven Healthcare Innovation: Transforming the <span className="gradient-text">Future of Medicine</span>
+                  </h1>
+                  <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
+                    Our AI-powered healthcare solutions leverage the latest advances in artificial intelligence to automate routine tasks, 
+                    enhance clinical decision-making, and improve patient outcomes. From prescription generation to predictive analytics, 
+                    our AI tools are transforming healthcare delivery.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button className="gradient-primary hover:shadow-primary text-lg px-8 py-6">
+                      Explore AI Solutions
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                    <Button variant="outline" className="text-lg px-8 py-6 glass-card border-white/20">
+                      Request Demo
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-          {/* AI Solutions Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiSolutions.map((solution, index) => (
-              <Card key={index} className="glass-card border-white/10 hover-lift group h-full">
-                <CardHeader>
-                  <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:glow-accent transition-all duration-300">
-                    <div className="text-primary-foreground">
-                      {solution.icon}
-                    </div>
-                  </div>
-                  <CardTitle className="text-xl">{solution.name}</CardTitle>
-                  <CardDescription className="text-foreground/70">
-                    {solution.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2">
-                    {solution.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-foreground/60">
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full mr-2"></div>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+            {/* AI Innovation Section */}
+            <section className="py-20">
+              <div className="container mx-auto px-2">
+                <div className="text-center mb-16">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    AI Innovation in <span className="gradient-text">Healthcare</span>
+                  </h2>
+                  <p className="text-xl text-foreground/80 max-w-4xl mx-auto">
+                    Transform Healthcare with AI features—available separately or easily integrated with your HIS systems.
+                  </p>
+                </div>
+
+                {/* AI Solutions Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {aiSolutions.map((solution, index) => (
+                    <Card key={index} className="glass-card border-white/10 hover-lift group h-full">
+                      <CardHeader>
+                        <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:glow-accent transition-all duration-300">
+                          <div className="text-primary-foreground">
+                            {solution.icon}
+                          </div>
+                        </div>
+                        <CardTitle className="text-xl">{solution.name}</CardTitle>
+                        <CardDescription className="text-foreground/70">
+                          {solution.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-2">
+                          {solution.features.map((feature, idx) => (
+                            <div key={idx} className="flex items-center text-sm text-foreground/60">
+                              <div className="w-1.5 h-1.5 bg-accent rounded-full mr-2"></div>
+                              {feature}
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </section>
 
       {/* Benefits Section */}
       <section className="py-20">
@@ -220,30 +237,35 @@ const AIHealthcare = () => {
         </div>
       </section>
 
-      {/* Integration Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-2">
-          <div className="glass-card p-12 rounded-2xl max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold mb-6">
-              Seamless Integration with Your <span className="gradient-text">Existing Systems</span>
-            </h3>
-            <p className="text-xl text-foreground/80 mb-8">
-              Our AI solutions integrate seamlessly with SoftPulse HIS, MedPulse CMS, or can be deployed as standalone solutions 
-              compatible with your existing healthcare infrastructure.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="gradient-primary hover:shadow-primary text-lg px-8 py-6">
-                Schedule AI Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button variant="outline" className="text-lg px-8 py-6 glass-card border-white/20">
-                Integration Guide
-              </Button>
-            </div>
+            {/* Integration Section */}
+            <section className="py-20">
+              <div className="container mx-auto px-2">
+                <div className="glass-card p-12 rounded-2xl max-w-4xl mx-auto text-center">
+                  <h3 className="text-3xl font-bold mb-6">
+                    Seamless Integration with Your <span className="gradient-text">Existing Systems</span>
+                  </h3>
+                  <p className="text-xl text-foreground/80 mb-8">
+                    Our AI solutions integrate seamlessly with SoftPulse HIS, MedPulse CMS, or can be deployed as standalone solutions 
+                    compatible with your existing healthcare infrastructure.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button className="gradient-primary hover:shadow-primary text-lg px-8 py-6">
+                      Schedule AI Demo
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                    <Button variant="outline" className="text-lg px-8 py-6 glass-card border-white/20">
+                      Integration Guide
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
-      </section>
-    </div>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </>
   );
 };
 

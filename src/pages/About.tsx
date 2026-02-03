@@ -75,6 +75,17 @@ const About = () => {
         <title>About Us - SoftpulseAI Technologies</title>
         <meta name="description" content="Learn about SoftpulseAI Technologies - a forward-thinking IT solutions partner specializing in healthcare technology, AI automation, and digital transformation." />
         <meta name="keywords" content="about softpulseai, healthcare technology, AI solutions, digital transformation, IT company India" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://softpulseai.com/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softpulseai.com/about" />
+        <meta property="og:title" content="About Us - SoftpulseAI Technologies" />
+        <meta property="og:description" content="Learn about SoftpulseAI Technologies - a forward-thinking IT solutions partner specializing in healthcare technology, AI automation, and digital transformation." />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us - SoftpulseAI Technologies" />
+        <meta name="twitter:description" content="Learn about SoftpulseAI Technologies - a forward-thinking IT solutions partner specializing in healthcare technology, AI automation, and digital transformation." />
+        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
       </Helmet>
       
       <div className="min-h-screen bg-background relative">

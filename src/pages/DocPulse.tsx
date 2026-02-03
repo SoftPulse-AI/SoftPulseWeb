@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Helmet } from "react-helmet";
+import Navigation from "@/components/Navigation";
+import FloatingShapes from "@/components/FloatingShapes";
+import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Footer";
 import { 
   FileText, 
   History, 
@@ -12,17 +17,8 @@ import {
   Stethoscope,
   Check
 } from "lucide-react";
-import { useEffect } from "react";
 
 const DocPulse = () => {
-  useEffect(() => {
-    document.title = "DocPulse - Doctor Scheduling & Communication Platform | SoftpulseAI";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'DocPulse - Comprehensive doctor scheduling and communication platform. Create e-prescriptions, access patient records, manage appointments, and enhance healthcare communication.');
-    }
-  }, []);
-
   const features = [
     { 
       name: "Create & Share e-Prescriptions", 
@@ -74,7 +70,28 @@ const DocPulse = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>DocPulse - Doctor Scheduling Platform | SoftpulseAI</title>
+        <meta name="description" content="DocPulse is a doctor scheduling and communication platform. Create e-prescriptions, access patient records, manage appointments, and enhance healthcare coordination." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://softpulseai.com/docpulse" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softpulseai.com/docpulse" />
+        <meta property="og:title" content="DocPulse - Doctor Scheduling Platform | SoftpulseAI" />
+        <meta property="og:description" content="Doctor scheduling and communication platform. Create e-prescriptions, access patient records, manage appointments, and enhance healthcare coordination." />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DocPulse - Doctor Scheduling Platform | SoftpulseAI" />
+        <meta name="twitter:description" content="Doctor scheduling and communication platform. Create e-prescriptions, access patient records, manage appointments, and enhance healthcare coordination." />
+        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background relative">
+        <FloatingShapes />
+        <Navigation />
+        <div className="pt-20 relative z-10">
+          <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-2">
@@ -217,7 +234,12 @@ const DocPulse = () => {
           </div>
         </div>
       </section>
-    </div>
+          </div>
+        </div>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </>
   );
 };
 

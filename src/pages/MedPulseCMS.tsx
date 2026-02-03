@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Helmet } from "react-helmet";
+import Navigation from "@/components/Navigation";
+import FloatingShapes from "@/components/FloatingShapes";
+import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Footer";
 import { 
   UserPlus, 
   Monitor, 
@@ -16,17 +21,8 @@ import {
   Clock,
   Users
 } from "lucide-react";
-import { useEffect } from "react";
 
 const MedPulseCMS = () => {
-  useEffect(() => {
-    document.title = "MedPulse CMS - Clinical Management System for Outpatient Clinics | SoftpulseAI";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'MedPulse CMS - Comprehensive clinical management system for outpatient clinics. Streamline OPD operations, appointments, e-prescriptions, and patient communication.');
-    }
-  }, []);
-
   const modules = [
     { name: "OPD Registration", icon: <UserPlus className="w-6 h-6" />, description: "Quick patient registration and check-in process" },
     { name: "Doctor Dashboard", icon: <Monitor className="w-6 h-6" />, description: "Comprehensive doctor interface for patient management" },
@@ -56,7 +52,28 @@ const MedPulseCMS = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>MedPulse CMS - Clinic Management System | SoftpulseAI</title>
+        <meta name="description" content="MedPulse CMS is a clinical management system for outpatient clinics. Streamline OPD operations, appointments, e-prescriptions, reminders, and patient communication." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://softpulseai.com/medpulse-cms" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softpulseai.com/medpulse-cms" />
+        <meta property="og:title" content="MedPulse CMS - Clinic Management System | SoftpulseAI" />
+        <meta property="og:description" content="MedPulse CMS is a clinical management system for outpatient clinics. Streamline OPD operations, appointments, e-prescriptions, and patient communication." />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="MedPulse CMS - Clinic Management System | SoftpulseAI" />
+        <meta name="twitter:description" content="MedPulse CMS is a clinical management system for outpatient clinics. Streamline OPD operations, appointments, e-prescriptions, and patient communication." />
+        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background relative">
+        <FloatingShapes />
+        <Navigation />
+        <div className="pt-20 relative z-10">
+          <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-2">
@@ -182,7 +199,12 @@ const MedPulseCMS = () => {
           </div>
         </div>
       </section>
-    </div>
+          </div>
+        </div>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </>
   );
 };
 

@@ -58,7 +58,7 @@ const Footer = () => {
               <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
               <li><Link to="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
               <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-              <li><a href="mailto:info@softpulseai.in" className="hover:text-primary transition-colors">📧 info@softpulseai.in</a></li>
+              <li><a href="mailto:info@softpulseai.com" className="hover:text-primary transition-colors">📧 info@softpulseai.com</a></li>
               <li><a href="tel:+91-XXXXXXXXXX" className="hover:text-primary transition-colors">📞 +91-9289425934</a></li>
             </ul>
           </div>

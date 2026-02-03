@@ -34,7 +34,7 @@ const NotFound = () => {
         <title>404 - Page Not Found | SoftpulseAI Technologies</title>
         <meta name="description" content="The page you're looking for doesn't exist. Explore our custom software development, AI solutions, healthcare technology, and digital transformation services." />
         <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://softpulseai.in/404" />
+        <link rel="canonical" href="https://softpulseai.com/404" />
       </Helmet>
       
       <div className="min-h-screen bg-background relative">
@@ -124,7 +124,7 @@ const NotFound = () => {
                   <Button 
                     size="lg" 
                     variant="outline"
-                    onClick={() => window.open('mailto:info@softpulseai.in')}
+                    onClick={() => window.open('mailto:info@softpulseai.com')}
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Email Support

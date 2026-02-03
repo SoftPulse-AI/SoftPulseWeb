@@ -23,12 +23,12 @@ const Index = () => {
         <meta property="og:title" content="SoftpulseAI Technologies - Leading IT Solutions | Custom Software, AI, Healthcare" />
         <meta property="og:description" content="Transform your business with our innovative digital solutions. Expert in custom software development, AI automation, healthcare technology, and mobile app development." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://softpulseai.in" />
-        <meta property="og:image" content="https://softpulseai.in/og-image.jpg" />
+        <meta property="og:url" content="https://softpulseai.com" />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SoftpulseAI Technologies - Leading IT Solutions" />
         <meta name="twitter:description" content="Expert IT solutions in custom software development, AI automation, healthcare technology, and digital transformation." />
-        <link rel="canonical" href="https://softpulseai.in" />
+        <link rel="canonical" href="https://softpulseai.com" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -36,8 +36,8 @@ const Index = () => {
             "name": "SoftpulseAI Technologies",
             "alternateName": ["SoftpulseAI", "Softpulse"],
             "description": "Leading IT solutions provider specializing in custom software development, AI automation, healthcare technology, mobile app development, web development, WhatsApp marketing, and digital transformation services",
-            "url": "https://softpulseai.in",
-            "logo": "https://softpulseai.in/logo.png",
+            "url": "https://softpulseai.com",
+            "logo": "https://softpulseai.com/favicon.png",
             "foundingDate": "2024",
             "founders": [
               {
@@ -61,7 +61,7 @@ const Index = () => {
               "@type": "ContactPoint",
               "telephone": "+91-XXXXXXXXXX",
               "contactType": "Customer Service",
-              "email": "info@softpulseai.in",
+              "email": "info@softpulseai.com",
               "availableLanguage": ["English", "Hindi"]
             },
             "address": {

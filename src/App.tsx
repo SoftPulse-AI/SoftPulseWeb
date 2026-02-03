@@ -11,6 +11,12 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import AIHealthcare from "./pages/AIHealthcare";
+import SoftPulseHIS from "./pages/SoftPulseHIS";
+import MedPulseCMS from "./pages/MedPulseCMS";
+import DocPulse from "./pages/DocPulse";
+import PatientPulse from "./pages/PatientPulse";
+import Dashboard from "./pages/Dashboard";
 import ScrollToTop from "@/components/ScrollToTop";
 import { useEffect } from "react";
 import FloatingShapes from "@/components/FloatingShapes";
@@ -78,6 +84,14 @@ const App = () => (
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+
+            {/* Product detail pages (SEO + direct landing pages) */}
+            <Route path="/softpulse-his" element={<SoftPulseHIS />} />
+            <Route path="/medpulse-cms" element={<MedPulseCMS />} />
+            <Route path="/docpulse" element={<DocPulse />} />
+            <Route path="/patientpulse" element={<PatientPulse />} />
+            <Route path="/ai-healthcare" element={<AIHealthcare />} />
+            <Route path="/dashboard" element={<Dashboard />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

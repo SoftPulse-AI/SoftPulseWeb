@@ -80,12 +80,12 @@ const Products = () => {
           <div className="flex items-center justify-center gap-2 text-foreground/60">
             <span>Visit our healthcare portal:</span>
             <a 
-              href="https://healthcare.softpulseai.in" 
+              href="https://healthcare.softpulseai.com" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-accent hover:text-accent-glow transition-colors inline-flex items-center gap-1"
             >
-              healthcare.softpulseai.in
+              healthcare.softpulseai.com
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>

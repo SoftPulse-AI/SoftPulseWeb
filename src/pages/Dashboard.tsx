@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Helmet } from "react-helmet";
+import Navigation from "@/components/Navigation";
+import FloatingShapes from "@/components/FloatingShapes";
+import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Footer";
 import { 
   BarChart3, 
   TrendingUp, 
@@ -16,17 +21,8 @@ import {
   Eye,
   Check
 } from "lucide-react";
-import { useEffect } from "react";
 
 const Dashboard = () => {
-  useEffect(() => {
-    document.title = "BI Dashboard - Business Intelligence & Analytics for Healthcare | SoftpulseAI";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'BI Dashboard - Comprehensive business intelligence and analytics dashboard for hospitals and clinics. Real-time insights, performance metrics, and data visualization.');
-    }
-  }, []);
-
   const dashboardFeatures = [
     { 
       name: "Real-time Analytics", 
@@ -119,7 +115,28 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>BI Dashboard - Business Intelligence & Analytics | SoftpulseAI</title>
+        <meta name="description" content="BI Dashboard for hospitals and clinics: real-time insights, KPIs, performance metrics, custom reports, and data visualization for smarter decisions." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://softpulseai.com/dashboard" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softpulseai.com/dashboard" />
+        <meta property="og:title" content="BI Dashboard - Business Intelligence & Analytics | SoftpulseAI" />
+        <meta property="og:description" content="BI Dashboard for hospitals and clinics: real-time insights, KPIs, performance metrics, custom reports, and data visualization." />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="BI Dashboard - Business Intelligence & Analytics | SoftpulseAI" />
+        <meta name="twitter:description" content="BI Dashboard for hospitals and clinics: real-time insights, KPIs, performance metrics, custom reports, and data visualization." />
+        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background relative">
+        <FloatingShapes />
+        <Navigation />
+        <div className="pt-20 relative z-10">
+          <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-2">
@@ -301,7 +318,12 @@ const Dashboard = () => {
           </div>
         </div>
       </section>
-    </div>
+          </div>
+        </div>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </>
   );
 };
 

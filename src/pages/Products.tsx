@@ -151,7 +151,18 @@ const Products = () => {
       <Helmet>
         <title>Healthcare Products - SoftpulseAI Technologies</title>
         <meta name="description" content="Comprehensive healthcare products including Hospital Information System (HIS), Clinical Management System (CMS), AI solutions, and patient engagement platforms." />
-        <meta name="keywords" content="healthcare software, hospital management system, clinic management, AI healthcare, medical software" />
+        <meta name="keywords" content="healthcare software, hospital information system, HIS software, clinic management system, CMS software, AI healthcare, patient engagement app, doctor scheduling platform, hospital dashboard analytics, healthcare digital transformation" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://softpulseai.com/products" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://softpulseai.com/products" />
+        <meta property="og:title" content="Healthcare Products - SoftpulseAI Technologies" />
+        <meta property="og:description" content="Explore our healthcare products: SoftPulse HIS, MedPulse CMS, AI Healthcare Solutions, DocPulse, PatientPulse, and BI Dashboard." />
+        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Healthcare Products - SoftpulseAI Technologies" />
+        <meta name="twitter:description" content="Explore our healthcare products: SoftPulse HIS, MedPulse CMS, AI Healthcare Solutions, DocPulse, PatientPulse, and BI Dashboard." />
+        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
       </Helmet>
       
       <div className="min-h-screen bg-background relative">
