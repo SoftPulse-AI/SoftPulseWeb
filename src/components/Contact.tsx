@@ -18,31 +18,51 @@ import { useState } from "react";
 const Contact = () => {
 
   const [status, setStatus] = useState(""); // status message
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const apiBaseUrl = "https://notificationservice.softpulseai.in";
+  const websiteClientId = 1;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus(""); // clear previous status
+    setIsSubmitting(true);
 
     const formData = new FormData(e.target);
+    const payload = {
+      client_id: websiteClientId,
+      name: String(formData.get("name") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      phone: String(formData.get("phone") || "").trim(),
+      message: String(formData.get("message") || "").trim(),
+      source: "website",
+      campaign: "softpulseai-contact-form",
+      page: window.location.href
+    };
 
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyPBOERk2yqnt5MihmGQV9n911QyO1rX_vkwrXaMxBBcDVZgrKiQ1DhBlNoZNG_dQRGjw/exec",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch(`${apiBaseUrl}/api/partner/public/website-lead`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
       if (response.ok) {
-        setStatus("Submitted successfully! We will reach you soon via email.");
+        setStatus("Submitted successfully! Our team will contact you shortly.");
         e.target.reset();
       } else {
-        setStatus("There was a problem submitting the form. Please try again.");
+        const data = await response.json().catch(() => ({}));
+        const msg = data?.error || "There was a problem submitting the form. Please try again.";
+        setStatus(msg);
       }
-    } catch (err) {
+    } catch (_err) {
       setStatus("There was a problem submitting the form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
+ 
+  const statusClassName = status.toLowerCase().includes("success")
+    ? "text-green-600"
+    : "text-red-600";
 
   const contactInfo = [
     {
@@ -168,13 +188,17 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full gradient-primary hover:shadow-primary group">
-                  Send Message
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full gradient-primary hover:shadow-primary group"
+                >
+                  {isSubmitting ? "Submitting..." : "Send Message"}
                   <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
 
                 {status && (
-                  <div className="text-center mt-4 text-green-600 font-medium">
+                  <div className={`text-center mt-4 font-medium ${statusClassName}`}>
                     {status}
                   </div>
                 )}
