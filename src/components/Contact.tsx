@@ -40,7 +40,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch(`${apiBaseUrl}/api/partner/public/website-lead`, {
+      const response = await fetch(`${apiBaseUrl}/partner/public/website-lead`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
