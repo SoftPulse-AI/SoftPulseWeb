@@ -17,6 +17,7 @@ import MedPulseCMS from "./pages/MedPulseCMS";
 import DocPulse from "./pages/DocPulse";
 import PatientPulse from "./pages/PatientPulse";
 import Dashboard from "./pages/Dashboard";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ScrollToTop from "@/components/ScrollToTop";
 import { useEffect } from "react";
 import FloatingShapes from "@/components/FloatingShapes";
@@ -92,6 +93,7 @@ const App = () => (
             <Route path="/patientpulse" element={<PatientPulse />} />
             <Route path="/ai-healthcare" element={<AIHealthcare />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
