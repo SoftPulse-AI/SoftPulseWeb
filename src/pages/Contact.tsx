@@ -28,7 +28,7 @@ const ContactPage = () => {
       <div className="min-h-screen bg-background relative">
         <FloatingShapes />
         <Navigation />
-        <div className="pt-20 relative z-10">
+        <div className="pt-16 relative z-10">
           <Contact />
         </div>
         <Footer />

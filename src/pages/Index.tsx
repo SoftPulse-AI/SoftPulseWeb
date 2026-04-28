@@ -87,18 +87,18 @@ const Index = () => {
           <Hero />
           
           {/* How We Help You Grow Section */}
-          <section className="py-20 relative">
+          <section className="py-12 relative">
             <div className="container mx-auto px-2">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
                   How We Help You Grow — More Than Just Technology
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
                   We're not here to simply write code. We're here to transform how you operate, engage, and scale. As India's leading custom software development and AI solutions company, we deliver measurable results that drive business growth.
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
                 {[
                   {
                     icon: TrendingUp,
@@ -132,10 +132,10 @@ const Index = () => {
                   }
                 ].map((item, index) => (
                   <Card key={index} className="glass-card hover-lift border-primary/10">
-                    <CardContent className="p-6">
-                      <item.icon className="w-12 h-12 text-primary mb-4" />
-                      <h3 className="text-xl font-semibold mb-3 text-foreground">{item.title}</h3>
-                      <p className="text-muted-foreground">{item.description}</p>
+                    <CardContent className="p-4">
+                      <item.icon className="w-9 h-9 text-primary mb-3" />
+                      <h3 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -145,25 +145,25 @@ const Index = () => {
           </section>
 
           {/* SEO-Optimized Company Expertise Section */}
-          <section className="py-20 relative bg-gradient-to-br from-primary/5 to-accent/5">
+          <section className="py-12 relative bg-gradient-to-br from-primary/5 to-accent/5">
             <div className="container mx-auto px-2">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
                   Why Choose SoftpulseAI Technologies?
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+                <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto">
                   As India's premier custom software development and AI solutions company, we specialize in healthcare technology, mobile app development, and digital transformation services that deliver exceptional ROI.
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
                 <Card className="glass-card hover-lift border-primary/10">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center mb-4">
+                  <CardContent className="p-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center mb-3">
                       <Target className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-foreground">Healthcare Technology Experts</h3>
-                    <p className="text-muted-foreground mb-4">Specialized in Hospital Information Systems (HIS), Clinic Management Systems (CMS), and AI-powered healthcare solutions that improve patient care and operational efficiency.</p>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground">Healthcare Technology Experts</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Specialized in Hospital Information Systems (HIS), Clinic Management Systems (CMS), and AI-powered healthcare solutions that improve patient care and operational efficiency.</p>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• SoftPulse HIS - Complete hospital management</li>
                       <li>• MedPulse CMS - Clinic operations</li>
@@ -174,12 +174,12 @@ const Index = () => {
                 </Card>
 
                 <Card className="glass-card hover-lift border-primary/10">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center mb-4">
+                  <CardContent className="p-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center mb-3">
                       <Zap className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-foreground">AI & Automation Solutions</h3>
-                    <p className="text-muted-foreground mb-4">Cutting-edge AI automation, machine learning, and intelligent systems that streamline operations and boost productivity across industries.</p>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground">AI & Automation Solutions</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Cutting-edge AI automation, machine learning, and intelligent systems that streamline operations and boost productivity across industries.</p>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• AI-powered chatbots and virtual assistants</li>
                       <li>• Predictive analytics and business intelligence</li>
@@ -190,12 +190,12 @@ const Index = () => {
                 </Card>
 
                 <Card className="glass-card hover-lift border-primary/10">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center mb-4">
+                  <CardContent className="p-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center mb-3">
                       <Users className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-foreground">Proven Track Record</h3>
-                    <p className="text-muted-foreground mb-4">100+ successful projects, 80+ happy clients, and 98% success rate across healthcare, e-commerce, real estate, and enterprise sectors.</p>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground">Proven Track Record</h3>
+                    <p className="text-sm text-muted-foreground mb-3">100+ successful projects, 80+ happy clients, and 98% success rate across healthcare, e-commerce, real estate, and enterprise sectors.</p>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• 5+ years of industry experience</li>
                       <li>• 100+ completed projects</li>

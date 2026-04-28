@@ -70,13 +70,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 relative">
+    <section id="services" className="py-12 relative">
       <div className="container mx-auto px-2">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Our <span className="gradient-text">Core Expertise</span>
           </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto">
             Innovative solutions for a connected world, designed to drive sustainable growth and digital transformation.
           </p>
         </div>

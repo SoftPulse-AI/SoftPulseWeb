@@ -68,13 +68,13 @@ const Products = () => {
   ];
 
   return (
-    <section id="products" className="py-20 relative">
+    <section id="products" className="py-12 relative">
       <div className="container mx-auto px-2">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Healthcare <span className="gradient-text">Products</span>
           </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto mb-4">
+          <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto mb-3">
             Empowering healthcare with innovative digital solutions that improve patient care and operational efficiency.
           </p>
           <div className="flex items-center justify-center gap-2 text-foreground/60">
@@ -145,12 +145,12 @@ const Products = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="glass-card p-8 rounded-2xl max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">
+        <div className="text-center mt-10">
+          <div className="glass-card p-5 rounded-xl max-w-3xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-bold mb-3">
               Currently Serving <span className="gradient-text">Multiple Hospitals</span> Across India
             </h3>
-            <p className="text-foreground/70 mb-6">
+            <p className="text-sm md:text-base text-foreground/70 mb-4">
               Join the growing number of healthcare institutions that trust SoftpulseAI for their digital transformation.
             </p>
             <Button className="gradient-primary hover:shadow-primary">

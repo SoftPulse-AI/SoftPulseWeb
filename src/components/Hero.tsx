@@ -30,7 +30,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden "> 
+    <section id="home" className="min-h-[88vh] flex items-center justify-center relative overflow-hidden"> 
      {/* bg-white */}
       {/* Hero Image Background */}
       {/* <div className="absolute inset-0">
@@ -44,36 +44,36 @@ const Hero = () => {
       </div> */}
 
       <div className="container mx-auto px-2 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div className="lg:w-1/2 text-center lg:text-left space-y-8 slide-up">
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          <div className="lg:w-1/2 text-center lg:text-left space-y-5 slide-up">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-6 mt-mobile">
+            <div className="inline-flex items-center gap-2 glass-card px-3 py-1.5 rounded-full mb-3 mt-mobile">
               <Sparkles className="w-4 h-4 text-accent" />
-              <span className="text-sm text-foreground/80">Pioneering Next-Generation Solutions</span>
+              <span className="text-xs text-foreground/80">Pioneering Next-Generation Solutions</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               <span className="gradient-text">SoftpulseAI</span>
               <br />
               <span className="text-foreground">Technologies</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
               Leading IT Solutions in Website Development, App Development, Healthcare & AI-Powered Systems
             </p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base text-muted-foreground leading-relaxed">
               Our mission is to deliver scalable, innovative digital solutions that fuel business growth, enhance operational efficiency, and elevate customer experiences across diverse industries.
             </p>
 
             {/* CTA Buttons */}
-         <div className="flex flex-col sm:flex-row gap-4">
+         <div className="flex flex-col sm:flex-row gap-3">
   <Link to="/services">
     <Button
       size="lg"
-      className="gradient-primary hover:shadow-primary transition-smooth group px-8 py-6 text-lg"
+      className="gradient-primary hover:shadow-primary transition-smooth group px-6 py-5 text-base"
     >
       Explore Solutions
       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -84,7 +84,7 @@ const Hero = () => {
     <Button
       variant="outline"
       size="lg"
-      className="border-primary/20 hover:border-primary/50 px-8 py-6 text-lg"
+      className="border-primary/20 hover:border-primary/50 px-6 py-5 text-base"
     >
       <Zap className="mr-2 w-5 h-5" />
       View Products
@@ -105,22 +105,22 @@ const Hero = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20 max-w-6xl mx-auto">
-          <div className="glass-card p-6 rounded-xl hover-lift border-primary/10">
-            <div className="text-3xl font-bold gradient-text mb-2">50+</div>
-            <div className="text-muted-foreground">Projects Delivered</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 max-w-6xl mx-auto">
+          <div className="glass-card p-4 rounded-lg hover-lift border-primary/10">
+            <div className="text-2xl font-bold gradient-text mb-1">50+</div>
+            <div className="text-sm text-muted-foreground">Projects Delivered</div>
           </div>
-          <div className="glass-card p-6 rounded-xl hover-lift border-primary/10">
-            <div className="text-3xl font-bold gradient-text mb-2">10+</div>
-            <div className="text-muted-foreground">Expert Team Members</div>
+          <div className="glass-card p-4 rounded-lg hover-lift border-primary/10">
+            <div className="text-2xl font-bold gradient-text mb-1">10+</div>
+            <div className="text-sm text-muted-foreground">Expert Team Members</div>
           </div>
-          <div className="glass-card p-6 rounded-xl hover-lift border-primary/10">
-            <div className="text-3xl font-bold gradient-text mb-2">100%</div>
-            <div className="text-muted-foreground">Client Satisfaction</div>
+          <div className="glass-card p-4 rounded-lg hover-lift border-primary/10">
+            <div className="text-2xl font-bold gradient-text mb-1">100%</div>
+            <div className="text-sm text-muted-foreground">Client Satisfaction</div>
           </div>
-          <div className="glass-card p-6 rounded-xl hover-lift border-primary/10">
-            <div className="text-3xl font-bold gradient-text mb-2">24/7</div>
-            <div className="text-muted-foreground">Support Available</div>
+          <div className="glass-card p-4 rounded-lg hover-lift border-primary/10">
+            <div className="text-2xl font-bold gradient-text mb-1">24/7</div>
+            <div className="text-sm text-muted-foreground">Support Available</div>
           </div>
         </div>
       </div>

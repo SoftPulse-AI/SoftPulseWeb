@@ -95,9 +95,9 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 relative">
+    <section id="contact" className="py-12 relative">
       {/* Hero Image */}
-      <div className="relative h-64 mb-16 overflow-hidden rounded-2xl mx-6">
+      <div className="relative h-44 md:h-52 mb-8 overflow-hidden rounded-xl mx-3 md:mx-4">
         <img
           src={contactHero}
           alt="Contact Us"
@@ -105,34 +105,34 @@ const Contact = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-accent/60 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl opacity-90">Let's build something amazing together</p>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">Contact Us</h1>
+            <p className="text-sm md:text-base opacity-90">Let's build something amazing together</p>
           </div>
         </div>
       </div>
 
       <div className="container mx-auto px-2">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-sm md:text-base text-foreground/80 max-w-3xl mx-auto">
             Let's explore how we can co-create solutions that fuel your vision, boost your ROI,
             and build a smarter tomorrow — together.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Contact Form */}
-          <Card className="glass-card border-white/10 p-8">
-            <CardHeader className="p-0 mb-6">
-              <CardTitle className="text-2xl flex items-center gap-3">
-                <MessageSquare className="w-7 h-7 text-accent" />
+          <Card className="glass-card border-white/10 p-5">
+            <CardHeader className="p-0 mb-4">
+              <CardTitle className="text-xl flex items-center gap-2">
+                <MessageSquare className="w-6 h-6 text-accent" />
                 Send us a Message
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 {/* Name */}
                 <div>
                   <label className="text-sm font-medium text-foreground/80 mb-2 block">
@@ -208,17 +208,17 @@ const Contact = () => {
           </Card>
 
           {/* Contact Info & Quick Actions */}
-          <div className="space-y-8">
+          <div className="space-y-5">
             {/* Contact Information */}
-            <Card className="glass-card border-white/10 p-6">
-              <CardHeader className="p-0 mb-6">
-                <CardTitle className="text-xl">Contact Information</CardTitle>
+            <Card className="glass-card border-white/10 p-4">
+              <CardHeader className="p-0 mb-4">
+                <CardTitle className="text-lg">Contact Information</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-center gap-4">
-                      <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center">
+                    <div key={index} className="flex items-center gap-3">
+                      <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
                         <div className="text-primary-foreground">
                           {info.icon}
                         </div>
@@ -245,12 +245,12 @@ const Contact = () => {
             </Card>
 
             {/* Quick Actions */}
-            <Card className="glass-card border-white/10 p-6">
-              <CardHeader className="p-0 mb-6">
-                <CardTitle className="text-xl">Quick Actions</CardTitle>
+            <Card className="glass-card border-white/10 p-4">
+              <CardHeader className="p-0 mb-4">
+                <CardTitle className="text-lg">Quick Actions</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <Button
                     variant="outline"
                     className="w-full glass-card border-white/20 hover:border-accent/50 justify-between group"
@@ -287,9 +287,9 @@ const Contact = () => {
             </Card>
 
             {/* Commitment Message */}
-            <Card className="glass-card border-white/10 p-6">
+            <Card className="glass-card border-white/10 p-4">
               <CardContent className="p-0 text-center">
-                <h3 className="text-lg font-semibold mb-3">Our Commitment</h3>
+                <h3 className="text-base font-semibold mb-2">Our Commitment</h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">
                   We're committed to your growth. Whether you're a startup or enterprise,
                   we're with you every step of the way — delivering world-class expertise

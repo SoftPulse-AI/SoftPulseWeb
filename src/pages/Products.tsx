@@ -5,7 +5,7 @@ import FloatingShapes from "@/components/FloatingShapes";
 import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
 import healthcareHero from "@/assets/healthcare-hero.webp";
-import { 
+import {
   Building2, 
   Stethoscope, 
   Brain, 
@@ -13,10 +13,6 @@ import {
   Users, 
   BarChart3,
   Monitor,
-  Database,
-  Shield,
-  Zap,
-  Clock,
   CheckCircle2
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -149,19 +145,19 @@ const Products = () => {
   return (
     <>
       <Helmet>
-        <title>Healthcare Products - SoftpulseAI Technologies</title>
-        <meta name="description" content="Comprehensive healthcare products including Hospital Information System (HIS), Clinical Management System (CMS), AI solutions, and patient engagement platforms." />
-        <meta name="keywords" content="healthcare software, hospital information system, HIS software, clinic management system, CMS software, AI healthcare, patient engagement app, doctor scheduling platform, hospital dashboard analytics, healthcare digital transformation" />
+        <title>HealthTech Solutions - SoftpulseAI Technologies</title>
+        <meta name="description" content="Healthcare software for hospitals and clinics: SoftPulse HIS, MedPulse CMS, DocPulse, PatientPulse, BI Dashboard, and AI Healthcare Solutions." />
+        <meta name="keywords" content="hospital management software India, clinic management system, healthcare software, hospital information system, AI healthcare solutions, patient engagement platform, healthcare analytics dashboard" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://softpulseai.com/products" />
+        <link rel="canonical" href="https://softpulseai.com/healthtech" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://softpulseai.com/products" />
-        <meta property="og:title" content="Healthcare Products - SoftpulseAI Technologies" />
-        <meta property="og:description" content="Explore our healthcare products: SoftPulse HIS, MedPulse CMS, AI Healthcare Solutions, DocPulse, PatientPulse, and BI Dashboard." />
+        <meta property="og:url" content="https://softpulseai.com/healthtech" />
+        <meta property="og:title" content="HealthTech Solutions - SoftpulseAI Technologies" />
+        <meta property="og:description" content="Healthcare software for hospitals and clinics: HIS, CMS, doctor workflow, patient engagement, BI, and AI automation." />
         <meta property="og:image" content="https://softpulseai.com/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Healthcare Products - SoftpulseAI Technologies" />
-        <meta name="twitter:description" content="Explore our healthcare products: SoftPulse HIS, MedPulse CMS, AI Healthcare Solutions, DocPulse, PatientPulse, and BI Dashboard." />
+        <meta name="twitter:title" content="HealthTech Solutions - SoftpulseAI Technologies" />
+        <meta name="twitter:description" content="Healthcare software for hospitals and clinics: HIS, CMS, doctor workflow, patient engagement, BI, and AI automation." />
         <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
       </Helmet>
       
@@ -169,57 +165,57 @@ const Products = () => {
         <FloatingShapes />
         <Navigation />
         
-        <div className="pt-20 relative z-10">
+        <div className="pt-16 relative z-10">
           {/* Header */}
-          <div className="container mx-auto px-2 py-12">
-            <div className="text-center mb-12">
-              <div className="relative mb-12">
+          <div className="container mx-auto px-2 py-8">
+            <div className="text-center mb-8">
+              <div className="relative mb-8">
                 <img 
                   src={healthcareHero} 
                   alt="Healthcare technology solutions and digital innovation"
-                  className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-2xl"
+                  className="w-full h-52 md:h-64 object-cover rounded-xl shadow-xl"
                   loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">
-                Healthcare Products
+              <h1 className="text-3xl md:text-5xl font-bold gradient-text mb-4">
+                HealthTech Solutions
               </h1>
-              <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-                Comprehensive suite of healthcare solutions designed to streamline operations, 
-                enhance patient care, and drive digital transformation in healthcare.
+              <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto">
+                Healthcare software built to automate operations, improve patient experience,
+                and increase revenue for hospitals and clinics.
               </p>
             </div>
           </div>
 
           {/* Product Interface */}
           <div className="container mx-auto px-2">
-            <div className="flex flex-col lg:flex-row gap-8 min-h-[600px]">
+            <div className="flex flex-col lg:flex-row gap-5 min-h-[560px]">
               {/* Sidebar */}
-              <div className="lg:w-1/3">
-                <Card className="glass-card border-white/10 h-full">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-6 gradient-text">Our Products</h3>
-                    <div className="space-y-3">
+              <div className="lg:w-1/3 lg:sticky lg:top-24 self-start">
+                <Card className="glass-card border-white/10">
+                  <CardContent className="p-4 max-h-[62vh] lg:max-h-[80vh] overflow-y-auto">
+                    <h3 className="text-lg font-semibold mb-4 gradient-text">HealthTech Products</h3>
+                    <div className="space-y-2">
                       {products.map((product) => {
                         const Icon = product.icon;
                         return (
                           <button
                             key={product.id}
                             onClick={() => setSelectedProduct(product.id)}
-                            className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
+                            className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${
                               selectedProduct === product.id
-                                ? 'bg-primary/20 border border-primary/30 shadow-primary'
+                                ? 'bg-muted/70 border border-border'
                                 : 'hover:bg-white/5 border border-transparent'
                             }`}
                           >
                             <div className="flex items-center space-x-3">
                               <Icon className={`w-6 h-6 ${
-                                selectedProduct === product.id ? 'text-primary' : 'text-foreground/60'
+                                selectedProduct === product.id ? 'text-foreground' : 'text-foreground/60'
                               }`} />
                               <div>
                                 <div className={`font-medium ${
-                                  selectedProduct === product.id ? 'text-primary' : 'text-foreground'
+                                  selectedProduct === product.id ? 'text-foreground' : 'text-foreground'
                                 }`}>
                                   {product.name}
                                 </div>
@@ -239,39 +235,39 @@ const Products = () => {
               {/* Content */}
               <div className="lg:w-2/3">
                 <Card className="glass-card border-white/10 h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-5">
                     {currentProduct && (
-                      <div className="space-y-8">
+                      <div className="space-y-5">
                         {/* Header */}
-                        <div className="flex items-center space-x-4">
-                          <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center">
-                            <currentProduct.icon className="w-8 h-8 text-white" />
+                        <div className="flex items-center space-x-3">
+                          <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center">
+                            <currentProduct.icon className="w-6 h-6 text-white" />
                           </div>
                           <div>
-                            <h2 className="text-3xl font-bold gradient-text">{currentProduct.name}</h2>
-                            <p className="text-foreground/80">{currentProduct.description}</p>
+                            <h2 className="text-2xl font-bold gradient-text">{currentProduct.name}</h2>
+                            <p className="text-sm text-foreground/80">{currentProduct.description}</p>
                           </div>
                         </div>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-3 gap-2">
                           {Object.entries(currentProduct.stats).map(([key, value]) => (
-                            <div key={key} className="text-center p-4 bg-white/5 rounded-xl">
-                              <div className="text-2xl font-bold text-primary">{value}</div>
-                              <div className="text-sm text-foreground/60 capitalize">{key}</div>
+                            <div key={key} className="text-center p-2 bg-white/5 rounded-lg">
+                              <div className="text-lg font-bold text-primary">{value}</div>
+                              <div className="text-xs text-foreground/60 capitalize">{key}</div>
                             </div>
                           ))}
                         </div>
 
                         {/* Modules */}
                         <div>
-                          <h3 className="text-xl font-semibold mb-4 flex items-center">
+                          <h3 className="text-lg font-semibold mb-3 flex items-center">
                             <Monitor className="w-5 h-5 mr-2 text-accent" />
                             Key Modules
                           </h3>
-                          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                             {currentProduct.modules.map((module, index) => (
-                              <Badge key={index} variant="outline" className="p-2 text-center justify-center">
+                              <Badge key={index} variant="outline" className="p-1.5 text-center justify-center text-xs">
                                 {module}
                               </Badge>
                             ))}
@@ -280,22 +276,22 @@ const Products = () => {
 
                         {/* Benefits */}
                         <div>
-                          <h3 className="text-xl font-semibold mb-4 flex items-center">
+                          <h3 className="text-lg font-semibold mb-3 flex items-center">
                             <CheckCircle2 className="w-5 h-5 mr-2 text-accent" />
                             Key Benefits
                           </h3>
-                          <div className="space-y-3">
+                          <div className="space-y-2">
                             {currentProduct.benefits.map((benefit, index) => (
                               <div key={index} className="flex items-start space-x-3">
                                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <p className="text-foreground/80">{benefit}</p>
+                                <p className="text-sm text-foreground/80">{benefit}</p>
                               </div>
                             ))}
                           </div>
                         </div>
 
                         {/* CTA */}
-                        <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-white/10">
+                        <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-white/10">
                           <Button
   className="gradient-primary hover:shadow-primary flex-1"
   onClick={() => window.open('https://calendly.com/softpulseai/30min', '_blank')}
@@ -328,13 +324,13 @@ const Products = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="container mx-auto px-2 py-20">
+          <div className="container mx-auto px-2 py-12">
             <Card className="glass-card border-white/10 text-center">
-              <CardContent className="p-12">
-                <h2 className="text-3xl font-bold gradient-text mb-4">
+              <CardContent className="p-6 md:p-8">
+                <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-3">
                   Ready to Transform Your Healthcare Operations?
                 </h2>
-                <p className="text-foreground/80 mb-8 max-w-2xl mx-auto">
+                <p className="text-sm md:text-base text-foreground/80 mb-5 max-w-2xl mx-auto">
                   Join Multiple hospitals and 50+ clinics already using our solutions to enhance patient care and operational efficiency.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -352,6 +348,14 @@ const Products = () => {
   >
     Contact Sales
   </Button>
+                </div>
+                <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+                  <Button variant="outline" onClick={() => { window.location.href = "/growth"; }}>
+                    Explore Growth Systems
+                  </Button>
+                  <Button variant="outline" onClick={() => { window.location.href = "/services"; }}>
+                    Explore Implementation Services
+                  </Button>
                 </div>
               </CardContent>
             </Card>

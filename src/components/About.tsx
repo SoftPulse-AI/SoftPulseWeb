@@ -49,14 +49,14 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 relative">
+    <section id="about" className="py-12 relative">
       <div className="container mx-auto px-2">
         {/* Company Overview */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             About <span className="gradient-text">SoftpulseAI</span>
           </h2>
-          <p className="text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-foreground/80 max-w-4xl mx-auto leading-relaxed">
             A forward-thinking solutions partner fueled by innovation, integrity, and excellence. 
             We empower organizations to grow smarter, faster, and more sustainably through 
             bespoke technology solutions.
@@ -64,9 +64,9 @@ const About = () => {
         </div>
 
         {/* Our Story */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold">Our Story</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold">Our Story</h3>
             <div className="space-y-4 text-foreground/80 leading-relaxed">
               <p>
                 Founded by passionate engineers and problem-solvers, SoftpulseAI began with a simple mission: 
@@ -84,8 +84,8 @@ const About = () => {
             </div>
           </div>
           
-          <div className="glass-card p-8 rounded-2xl">
-            <h4 className="text-xl font-semibold mb-6 text-center">Our Growth Journey</h4>
+          <div className="glass-card p-5 rounded-xl">
+            <h4 className="text-lg font-semibold mb-4 text-center">Our Growth Journey</h4>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="w-3 h-3 bg-accent rounded-full"></div>
@@ -113,14 +113,14 @@ const About = () => {
         </div>
 
         {/* Vision & Mission */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          <Card className="glass-card border-white/10 p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
+          <Card className="glass-card border-white/10 p-5">
             <CardContent className="p-0">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
                   <Eye className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold">Vision</h3>
+                <h3 className="text-xl font-bold">Vision</h3>
               </div>
               <p className="text-foreground/80 leading-relaxed">
                 To become a globally trusted technology partner — empowering organizations to embrace innovation, 
@@ -129,13 +129,13 @@ const About = () => {
             </CardContent>
           </Card>
 
-          <Card className="glass-card border-white/10 p-8">
+          <Card className="glass-card border-white/10 p-5">
             <CardContent className="p-0">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center">
                   <Target className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold">Mission</h3>
+                <h3 className="text-xl font-bold">Mission</h3>
               </div>
               <p className="text-foreground/80 leading-relaxed">
                 To design and deliver exceptional, cost-effective solutions powered by automation, AI, and actionable 
@@ -146,13 +146,13 @@ const About = () => {
         </div>
 
         {/* Core Values */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-center mb-12">Our Core Values</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-center mb-8">Our Core Values</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {values.map((value, index) => (
-              <Card key={index} className="glass-card border-white/10 hover-lift text-center p-6">
+              <Card key={index} className="glass-card border-white/10 hover-lift text-center p-4">
                 <CardContent className="p-0">
-                  <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center mx-auto mb-3">
                     <div className="text-primary-foreground">
                       {value.icon}
                     </div>
@@ -167,7 +167,7 @@ const About = () => {
 
         {/* Industries We Serve */}
         <div className="text-center">
-          <h3 className="text-3xl font-bold mb-8">Industries We Serve</h3>
+          <h3 className="text-2xl font-bold mb-6">Industries We Serve</h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {industries.map((industry, index) => (
               <Badge 

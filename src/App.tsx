@@ -4,20 +4,21 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { ThemeProvider } from "@/components/theme-provider";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import Products from "./pages/Products";
-import Services from "./pages/Services";
-import Portfolio from "./pages/Portfolio";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import AIHealthcare from "./pages/AIHealthcare";
-import SoftPulseHIS from "./pages/SoftPulseHIS";
-import MedPulseCMS from "./pages/MedPulseCMS";
-import DocPulse from "./pages/DocPulse";
-import PatientPulse from "./pages/PatientPulse";
-import Dashboard from "./pages/Dashboard";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Index from "@/pages/Index";
+import NotFound from "@/pages/NotFound";
+import Products from "@/pages/Products";
+import Services from "@/pages/Services";
+import Portfolio from "@/pages/Portfolio";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+import AIHealthcare from "@/pages/AIHealthcare";
+import SoftPulseHIS from "@/pages/SoftPulseHIS";
+import MedPulseCMS from "@/pages/MedPulseCMS";
+import DocPulse from "@/pages/DocPulse";
+import PatientPulse from "@/pages/PatientPulse";
+import Dashboard from "@/pages/Dashboard";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import GrowthSuite from "@/pages/GrowthSuite";
 import ScrollToTop from "@/components/ScrollToTop";
 import { useEffect } from "react";
 import FloatingShapes from "@/components/FloatingShapes";
@@ -80,7 +81,10 @@ const App = () => (
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/healthtech" element={<Products />} />
+            <Route path="/growth" element={<GrowthSuite />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/growth-suite" element={<GrowthSuite />} />
             <Route path="/services" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />

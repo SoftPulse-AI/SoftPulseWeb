@@ -4,7 +4,7 @@ import FloatingShapes from "@/components/FloatingShapes";
 import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
 import portfolioHero from "@/assets/portfolio-hero-new.webp";
-import { 
+import {
   Building2, 
   ShoppingCart, 
   Home, 
@@ -13,7 +13,6 @@ import {
   Heart,
   Briefcase,
   Users,
-  ExternalLink,
   Star
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -165,35 +164,35 @@ const Portfolio = () => {
         <FloatingShapes />
         <Navigation />
         
-        <div className="pt-20 relative z-10">
+        <div className="pt-16 relative z-10">
           {/* Header */}
-          <div className="container mx-auto px-2 py-12">
-            <div className="text-center mb-12">
-              <div className="relative mb-12">
+          <div className="container mx-auto px-2 py-8">
+            <div className="text-center mb-8">
+              <div className="relative mb-8">
                 <img 
                   src={portfolioHero} 
                   alt="Software development portfolio and successful projects showcase"
-                  className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-2xl"
+                  className="w-full h-52 md:h-64 object-cover rounded-xl shadow-xl"
                   loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">
+              <h1 className="text-3xl md:text-5xl font-bold gradient-text mb-4">
                 Our Portfolio
               </h1>
-              <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+              <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto">
                 Discover how we've helped businesses across various industries achieve 
                 digital transformation and drive sustainable growth through innovative solutions.
               </p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
               {stats.map((stat, index) => (
                 <Card key={index} className="glass-card border-white/10 text-center">
-                  <CardContent className="p-6">
-                    <div className="text-3xl font-bold gradient-text mb-2">{stat.value}</div>
-                    <div className="text-foreground/60">{stat.label}</div>
+                  <CardContent className="p-4">
+                    <div className="text-2xl font-bold gradient-text mb-1">{stat.value}</div>
+                    <div className="text-sm text-foreground/60">{stat.label}</div>
                   </CardContent>
                 </Card>
               ))}
@@ -201,31 +200,31 @@ const Portfolio = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="container mx-auto px-2 mb-20">
-            <h2 className="text-3xl font-bold text-center mb-12 gradient-text">Featured Projects</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="container mx-auto px-2 mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 gradient-text">Featured Projects</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {projects.map((project, index) => {
                 const Icon = project.icon;
                 return (
                   <Card key={index} className="glass-card border-white/10 hover-lift group">
-                    <CardContent className="p-6">
-                      <div className="flex items-center justify-between mb-4">
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between mb-3">
                         <Badge variant="outline" className="text-accent border-accent/30">
                           {project.category}
                         </Badge>
-                        <div className="text-3xl">{project.image}</div>
+                        <div className="text-2xl">{project.image}</div>
                       </div>
                       
-                      <div className="flex items-center space-x-3 mb-3">
+                      <div className="flex items-center space-x-2 mb-2">
                         <Icon className="w-6 h-6 text-primary" />
-                        <h3 className="text-xl font-semibold">{project.title}</h3>
+                        <h3 className="text-lg font-semibold">{project.title}</h3>
                       </div>
                       
-                      <p className="text-foreground/80 mb-4">{project.description}</p>
+                      <p className="text-sm text-foreground/80 mb-3">{project.description}</p>
                       
-                      <div className="space-y-4">
+                      <div className="space-y-3">
                         <div>
-                          <h4 className="font-medium mb-2">Tech Stack:</h4>
+                          <h4 className="font-medium text-sm mb-2">Tech Stack:</h4>
                           <div className="flex flex-wrap gap-1">
                             {project.tech.map((tech, i) => (
                               <Badge key={i} variant="secondary" className="text-xs">
@@ -236,7 +235,7 @@ const Portfolio = () => {
                         </div>
                         
                         <div>
-                          <h4 className="font-medium mb-2">Key Features:</h4>
+                          <h4 className="font-medium text-sm mb-2">Key Features:</h4>
                           <div className="flex flex-wrap gap-1">
                             {project.features.map((feature, i) => (
                               <Badge key={i} variant="outline" className="text-xs">
@@ -246,8 +245,8 @@ const Portfolio = () => {
                           </div>
                         </div>
                         
-                        <div className="p-3 bg-primary/10 rounded-lg">
-                          <h4 className="font-medium text-primary mb-1">Results:</h4>
+                        <div className="p-2.5 bg-primary/10 rounded-lg">
+                          <h4 className="font-medium text-sm text-primary mb-1">Results:</h4>
                           <p className="text-sm text-foreground/80">{project.results}</p>
                         </div>
                       </div>
@@ -260,18 +259,18 @@ const Portfolio = () => {
           </div>
 
           {/* Testimonials */}
-          <div className="container mx-auto px-2 mb-20">
-            <h2 className="text-3xl font-bold text-center mb-12 gradient-text">Client Testimonials</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="container mx-auto px-2 mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 gradient-text">Client Testimonials</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
               {testimonials.map((testimonial, index) => (
                 <Card key={index} className="glass-card border-white/10">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
+                  <CardContent className="p-4">
+                    <div className="flex items-center mb-3">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-foreground/80 mb-4 italic">"{testimonial.content}"</p>
+                    <p className="text-sm text-foreground/80 mb-3 italic">"{testimonial.content}"</p>
                     <div>
                       <div className="font-semibold">{testimonial.name}</div>
                       <div className="text-sm text-foreground/60">{testimonial.role}</div>
@@ -284,13 +283,13 @@ const Portfolio = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="container mx-auto px-2 py-20">
+          <div className="container mx-auto px-2 py-12">
             <Card className="glass-card border-white/10 text-center">
-              <CardContent className="p-12">
-                <h2 className="text-3xl font-bold gradient-text mb-4">
+              <CardContent className="p-6 md:p-8">
+                <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-3">
                   Ready to Be Our Next Success Story?
                 </h2>
-                <p className="text-foreground/80 mb-8 max-w-2xl mx-auto">
+                <p className="text-sm md:text-base text-foreground/80 mb-5 max-w-2xl mx-auto">
                   Join 80+ satisfied clients who have transformed their businesses with our innovative solutions. 
                   Let's discuss your project and create something amazing together.
                 </p>
