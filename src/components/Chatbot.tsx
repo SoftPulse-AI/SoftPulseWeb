@@ -48,19 +48,19 @@ const Chatbot = () => {
       id: 'contact',
       label: 'Contact',
       icon: <Phone size={14} />,
-      response: "Contact us:\n📧 info@softpulseai.com\n📞 +91-9289425934\n🌐 softpulseai.com\n📅 Book: https://calendly.com/softpulseai/30min"
+      response: "Contact us:\n📧 softpulseai@gmail.com\n📞 +91-9289425934\n🌐 softpulseai.com\n📅 Book: https://calendly.com/softpulseai/30min"
     },
     {
       id: 'demo',
       label: 'Book Demo',
       icon: <Calendar size={14} />,
-      response: "Book a demo:\n📅 https://calendly.com/softpulseai/30min\n📧 info@softpulseai.com\n\nWe'll show you our solutions!"
+      response: "Book a demo:\n📅 https://calendly.com/softpulseai/30min\n📧 softpulseai@gmail.com\n\nWe'll show you our solutions!"
     },
     {
       id: 'pricing',
       label: 'Pricing',
       icon: <Code size={14} />,
-      response: "Transparent pricing for all projects. Contact us for a detailed quote:\n📧 info@softpulseai.com\n📅 https://calendly.com/softpulseai/30min"
+      response: "Transparent pricing for all projects. Contact us for a detailed quote:\n📧 softpulseai@gmail.com\n📅 https://calendly.com/softpulseai/30min"
     },
     {
       id: 'portfolio',
@@ -104,12 +104,12 @@ const Chatbot = () => {
     
     // Pricing
     if (message.includes('price') || message.includes('cost') || message.includes('how much') || message.includes('budget')) {
-      return "We offer transparent pricing tailored to your project needs. For a detailed quote, please contact us at info@softpulseai.com or schedule a consultation at https://calendly.com/softpulseai/30min";
+      return "We offer transparent pricing tailored to your project needs. For a detailed quote, please contact us at softpulseai@gmail.com or schedule a consultation at https://calendly.com/softpulseai/30min";
     }
     
     // Contact information
     if (message.includes('contact') || message.includes('email') || message.includes('phone') || message.includes('reach')) {
-      return "You can reach us at:\n📧 Email: info@softpulseai.com\n📞 Phone: +91-9289425934\n🌐 Website: softpulseai.com\n📅 Schedule a call: https://calendly.com/softpulseai/30min";
+      return "You can reach us at:\n📧 Email: softpulseai@gmail.com\n📞 Phone: +91-9289425934\n🌐 Website: softpulseai.com\n📅 Schedule a call: https://calendly.com/softpulseai/30min";
     }
     
     // Portfolio/Projects
@@ -138,7 +138,7 @@ const Chatbot = () => {
     }
     
     // Default response
-    return "I understand you're interested in our services. For more specific information, please contact us at info@softpulseai.com or visit our website at softpulseai.com. You can also schedule a consultation at https://calendly.com/softpulseai/30min";
+    return "I understand you're interested in our services. For more specific information, please contact us at softpulseai@gmail.com or visit our website at softpulseai.com. You can also schedule a consultation at https://calendly.com/softpulseai/30min";
   };
 
   const handleQuickAction = (action: QuickAction) => {

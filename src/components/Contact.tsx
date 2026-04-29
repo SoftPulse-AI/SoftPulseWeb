@@ -68,8 +68,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "info@softpulseai.com",
-      link: "mailto:info@softpulseai.com"
+      value: "softpulseai@gmail.com",
+      link: "mailto:softpulseai@gmail.com"
     },
     {
       icon: <Globe className="w-6 h-6" />,
@@ -101,7 +101,7 @@ const Contact = () => {
         <img
           src={contactHero}
           alt="Contact Us"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-accent/60 flex items-center justify-center">
           <div className="text-center text-white">

@@ -88,7 +88,7 @@ const About = () => {
                 <img 
                   src={aboutHero} 
                   alt="SoftpulseAI Technologies team collaboration and innovation"
-                  className="w-full h-52 md:h-64 object-cover rounded-xl shadow-xl"
+                  className="w-full h-52 md:h-64 object-cover object-top rounded-xl shadow-xl"
                   loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>

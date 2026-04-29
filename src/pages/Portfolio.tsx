@@ -172,10 +172,10 @@ const Portfolio = () => {
                 <img 
                   src={portfolioHero} 
                   alt="Software development portfolio and successful projects showcase"
-                  className="w-full h-52 md:h-64 object-cover rounded-xl shadow-xl"
+                  className="w-full h-52 md:h-64 object-cover object-top rounded-xl shadow-xl"
                   loading="eager"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
               </div>
               <h1 className="text-3xl md:text-5xl font-bold gradient-text mb-4">
                 Our Portfolio

@@ -124,7 +124,7 @@ const NotFound = () => {
                   <Button 
                     size="lg" 
                     variant="outline"
-                    onClick={() => window.open('mailto:info@softpulseai.com')}
+                    onClick={() => window.open('mailto:softpulseai@gmail.com')}
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Email Support

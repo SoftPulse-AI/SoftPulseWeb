@@ -61,7 +61,7 @@ const Index = () => {
               "@type": "ContactPoint",
               "telephone": "+91-XXXXXXXXXX",
               "contactType": "Customer Service",
-              "email": "info@softpulseai.com",
+              "email": "softpulseai@gmail.com",
               "availableLanguage": ["English", "Hindi"]
             },
             "address": {
@@ -134,7 +134,7 @@ const Index = () => {
                   <Card key={index} className="glass-card hover-lift border-primary/10">
                     <CardContent className="p-4">
                       <item.icon className="w-9 h-9 text-primary mb-3" />
-                      <h3 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h3>
+                      <h3 className="!text-[13px] leading-snug font-semibold mb-2 text-foreground">{item.title}</h3>
                       <p className="text-sm text-muted-foreground">{item.description}</p>
                     </CardContent>
                   </Card>

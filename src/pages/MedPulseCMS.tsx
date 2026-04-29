@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import FloatingShapes from "@/components/FloatingShapes";
 import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
+import { BASE_URL, BLOG_POSTS, HIDDEN_KEYWORD_PAGES, PRODUCT_PAGES, SERVICE_PAGES } from "@/seo/seoConfig";
 import { 
   UserPlus, 
   Monitor, 
@@ -22,7 +24,37 @@ import {
   Users
 } from "lucide-react";
 
+const clamp = (value: string, maxChars: number) => {
+  if (value.length <= maxChars) return value;
+  return value.slice(0, maxChars - 1).trimEnd() + "…";
+};
+
+function cyclePick<T>(arr: T[], start: number, count: number, excludeFn?: (item: T) => boolean): T[] {
+  if (arr.length === 0 || count <= 0) return [];
+  const result: T[] = [];
+  let idx = ((start % arr.length) + arr.length) % arr.length;
+
+  for (let tries = 0; tries < arr.length * 2 && result.length < count; tries++) {
+    const candidate = arr[idx];
+    if (!excludeFn || !excludeFn(candidate)) result.push(candidate);
+    idx = (idx + 1) % arr.length;
+  }
+  return result;
+}
+
 const MedPulseCMS = () => {
+  const seoCfg = PRODUCT_PAGES.find((p) => p.path === "/medpulse-cms");
+  if (!seoCfg) return null;
+
+  const canonicalUrl = `${BASE_URL}${seoCfg.path}`;
+  const metaTitle = clamp(seoCfg.metaTitle, 60);
+  const metaDescription = clamp(seoCfg.metaDescription, 150);
+
+  const productLinks = cyclePick(PRODUCT_PAGES, seoCfg.order, 3, (p) => p.path === seoCfg.path);
+  const serviceLinks = cyclePick(SERVICE_PAGES, seoCfg.order + 1, 3);
+  const hiddenLinks = cyclePick(HIDDEN_KEYWORD_PAGES, seoCfg.order + 2, 2, (h) => h.path === seoCfg.path);
+  const blog = BLOG_POSTS[(seoCfg.order + 3) % BLOG_POSTS.length];
+
   const modules = [
     { name: "OPD Registration", icon: <UserPlus className="w-6 h-6" />, description: "Quick patient registration and check-in process" },
     { name: "Doctor Dashboard", icon: <Monitor className="w-6 h-6" />, description: "Comprehensive doctor interface for patient management" },
@@ -54,19 +86,65 @@ const MedPulseCMS = () => {
   return (
     <>
       <Helmet>
-        <title>MedPulse CMS - Clinic Management System | SoftpulseAI</title>
-        <meta name="description" content="MedPulse CMS is a clinical management system for outpatient clinics. Streamline OPD operations, appointments, e-prescriptions, reminders, and patient communication." />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://softpulseai.com/medpulse-cms" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://softpulseai.com/medpulse-cms" />
-        <meta property="og:title" content="MedPulse CMS - Clinic Management System | SoftpulseAI" />
-        <meta property="og:description" content="MedPulse CMS is a clinical management system for outpatient clinics. Streamline OPD operations, appointments, e-prescriptions, and patient communication." />
-        <meta property="og:image" content="https://softpulseai.com/favicon.png" />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={`${BASE_URL}/favicon.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="MedPulse CMS - Clinic Management System | SoftpulseAI" />
-        <meta name="twitter:description" content="MedPulse CMS is a clinical management system for outpatient clinics. Streamline OPD operations, appointments, e-prescriptions, and patient communication." />
-        <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={`${BASE_URL}/favicon.png`} />
+
+        {/* Structured data: Organization + Product + FAQ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "SoftpulseAI Technologies LLP",
+              url: BASE_URL,
+              logo: `${BASE_URL}/favicon.png`,
+              sameAs: [
+                "https://linkedin.com/company/softpulseai",
+                "https://twitter.com/softpulseai",
+                "https://facebook.com/softpulseai",
+                "https://instagram.com/softpulseai",
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              name: seoCfg.primaryKeyword,
+              description: metaDescription,
+              brand: { "@type": "Organization", name: "SoftpulseAI Technologies LLP", url: BASE_URL },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: seoCfg.faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: { "@type": "Answer", text: item.answer },
+              })),
+            }),
+          }}
+        />
       </Helmet>
 
       <div className="min-h-screen bg-background relative">
@@ -195,6 +273,77 @@ const MedPulseCMS = () => {
               <Button variant="outline" className="text-lg px-8 py-6 glass-card border-white/20">
                 Schedule Demo
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Internal Linking + FAQ */}
+      <section className="py-12">
+        <div className="container mx-auto px-2">
+          <div className="glass-card border-white/10 p-8 rounded-2xl max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6">Explore Related Solutions</h2>
+            <p className="text-foreground/80 mb-6">
+              MedPulse CMS supports clinic operations with CRM conversion journeys, AI-assisted workflows, and HR/payroll visibility, plus marketing journeys (including WhatsApp automation) delivered through web portals and mobile-ready experiences.
+            </p>
+
+            <div className="grid lg:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-3">Related Products (3)</h3>
+                <ul className="space-y-2 text-foreground/80">
+                  {productLinks.map((p) => (
+                    <li key={p.path}>
+                      <Link to={p.path} className="text-primary hover:underline">
+                        {p.anchorText}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-3">Related Services (3)</h3>
+                <ul className="space-y-2 text-foreground/80">
+                  {serviceLinks.map((s) => (
+                    <li key={s.path}>
+                      <Link to={s.path} className="text-primary hover:underline">
+                        {s.anchorText}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-3">Hidden Keyword Pages (2)</h3>
+                <ul className="space-y-2 text-foreground/80">
+                  {hiddenLinks.map((h) => (
+                    <li key={h.path}>
+                      <Link to={h.path} className="text-primary hover:underline">
+                        {h.anchorText}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-3">Read a Related Blog (1)</h3>
+                <p className="text-foreground/80">
+                  <Link to={`/blog/${blog.slug}`} className="text-primary hover:underline">
+                    {blog.title}
+                  </Link>
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12">
+              <h2 className="text-3xl font-bold mb-6">FAQ</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {seoCfg.faq.map((item) => (
+                  <div key={item.question} className="glass-card border-white/10 p-6 rounded-2xl">
+                    <h3 className="text-lg font-semibold mb-2">{item.question}</h3>
+                    <p className="text-foreground/80 leading-relaxed">{item.answer}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

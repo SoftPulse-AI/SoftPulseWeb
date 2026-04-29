@@ -30,7 +30,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-[88vh] flex items-center justify-center relative overflow-hidden"> 
+    <section id="home" className="min-h-[95vh] flex items-center justify-center relative overflow-hidden"> 
      {/* bg-white */}
       {/* Hero Image Background */}
       {/* <div className="absolute inset-0">
@@ -45,18 +45,17 @@ const Hero = () => {
 
       <div className="container mx-auto px-2 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8">
-          <div className="lg:w-1/2 text-center lg:text-left space-y-5 slide-up">
+          <div className="lg:w-1/2 text-center lg:text-left space-y-6 slide-up">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 glass-card px-3 py-1.5 rounded-full mb-3 mt-mobile">
               <Sparkles className="w-4 h-4 text-accent" />
-              <span className="text-xs text-foreground/80">Pioneering Next-Generation Solutions</span>
+              <span className="text-xs text-foreground/80">Where Intelligence Meets Innovation</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              <span className="gradient-text">SoftpulseAI</span>
-              <br />
-              <span className="text-foreground">Technologies</span>
+            <h1 className="hero-home-title font-bold leading-[1.05] whitespace-nowrap">
+              <span className="gradient-text inline-block whitespace-nowrap">SoftPulseAI</span>
+              <span className="text-foreground inline-block whitespace-nowrap ml-3">Technologies</span>
             </h1>
 
             {/* Subtitle */}
@@ -97,7 +96,7 @@ const Hero = () => {
     <img
       src={heroImage}
       alt="Modern software development team collaborating on innovative technology solutions"
-      className="w-full h-auto rounded-2xl shadow-2xl "
+      className="w-full h-auto object-center rounded-xl shadow-xl"
       loading="eager"
     />
   </div>

@@ -19,10 +19,13 @@ import PatientPulse from "@/pages/PatientPulse";
 import Dashboard from "@/pages/Dashboard";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import GrowthSuite from "@/pages/GrowthSuite";
+import SeoLandingPage from "@/pages/SeoLandingPage";
+import BlogPostPage from "@/pages/BlogPostPage";
 import ScrollToTop from "@/components/ScrollToTop";
 import { useEffect } from "react";
 import FloatingShapes from "@/components/FloatingShapes";
 import Chatbot from "@/components/Chatbot";
+import { HIDDEN_KEYWORD_PAGES, PRODUCT_PAGES, SERVICE_PAGES } from "@/seo/seoConfig";
 
 const ScrollToTopOnRouteChange = () => {
   const { pathname } = useLocation();
@@ -68,6 +71,11 @@ const ScrollToTopOnRouteChange = () => {
 
 const queryClient = new QueryClient();
 
+const SEO_LANDING_EXCLUSIONS = new Set<string>(["/softpulse-his", "/medpulse-cms"]);
+const seoLandingRoutes = [...PRODUCT_PAGES, ...SERVICE_PAGES, ...HIDDEN_KEYWORD_PAGES].filter(
+  (p) => !SEO_LANDING_EXCLUSIONS.has(p.path)
+);
+
 const App = () => (
   <ThemeProvider defaultTheme="system" storageKey="softpulse-ui-theme">
     <QueryClientProvider client={queryClient}>
@@ -98,6 +106,14 @@ const App = () => (
             <Route path="/ai-healthcare" element={<AIHealthcare />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+            {/* SEO-only landing routes (hidden keyword pages + service/product variations) */}
+            {seoLandingRoutes.map((cfg) => (
+              <Route key={cfg.path} path={cfg.path} element={<SeoLandingPage config={cfg} />} />
+            ))}
+
+            {/* Traffic engine: blog posts */}
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
