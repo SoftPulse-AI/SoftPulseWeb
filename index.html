@@ -66,116 +66,557 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Organization", "TechnologyCompany", "SoftwareApplication"],
-      "name": "SoftpulseAI Technologies LLP",
-      "alternateName": ["SoftpulseAI", "Softpulse", "SoftpulseAI Technologies"],
-      "description": "Leading IT solutions provider specializing in custom software development, AI automation, healthcare technology, mobile app development, web development, WhatsApp marketing, and digital transformation services",
-      "url": "https://softpulseai.com",
-      "logo": "https://softpulseai.com/favicon.png",
-      "image": "https://softpulseai.com/favicon.png",
-      "foundingDate": "2024",
-      "founders": [
+      "@graph": [
         {
-          "@type": "Person",
-          "name": "SoftpulseAI Team"
-        }
-      ],
-      "services": [
-        "Custom Software Development",
-        "AI Solutions & Automation", 
-        "Healthcare Technology Solutions",
-        "Mobile App Development",
-        "Web Development & Design",
-        "WhatsApp, SMS & Chatbot Marketing",
-        "Digital Marketing",
-        "Dashboard & Analytics Development",
-        "IT Outsourcing & Support",
-        "Hospital Information System (HIS)",
-        "Clinic Management System (CMS)",
-        "AI Healthcare Tools",
-        "Business Intelligence Dashboard"
-      ],
-      "products": [
+          "@type": "Organization",
+          "@id": "https://softpulseai.com/#organization",
+          "name": "SOFTPULSEAI TECHNOLOGIES",
+          "url": "https://softpulseai.com/",
+          "description": "Technology company providing AI automation, healthcare software, CRM systems, SaaS platforms, custom software development, digital transformation, analytics, and growth execution services for healthcare and multiple industries.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Delhi",
+            "addressCountry": "IN"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "knowsAbout": [
+            "AI automation",
+            "healthcare technology",
+            "healthcare software",
+            "CRM systems",
+            "SaaS platforms",
+            "custom software development",
+            "digital transformation",
+            "business intelligence",
+            "analytics dashboards",
+            "marketing automation",
+            "cloud infrastructure",
+            "API integration",
+            "WhatsApp automation",
+            "SMS automation",
+            "mobile applications",
+            "web applications"
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "10:00",
+              "closes": "19:00"
+            }
+          ]
+        },
         {
-          "@type": "SoftwareApplication",
+          "@type": "SoftwareCompany",
+          "@id": "https://softpulseai.com/#softwarecompany",
+          "name": "SOFTPULSEAI TECHNOLOGIES",
+          "url": "https://softpulseai.com/",
+          "description": "Enterprise-grade AI-powered products and scalable business systems for healthcare and other industries. Combines healthcare technology expertise, automation, analytics, growth systems, and custom engineering under one integrated ecosystem.",
+          "brand": {
+            "@id": "https://softpulseai.com/#organization"
+          },
+          "parentOrganization": {
+            "@id": "https://softpulseai.com/#organization"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Delhi",
+            "addressCountry": "IN"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "makesOffer": {
+            "@id": "https://softpulseai.com/#offer-catalog"
+          },
+          "knowsAbout": [
+            "AI automation",
+            "healthcare software",
+            "CRM automation",
+            "SaaS platforms",
+            "API integration",
+            "business intelligence",
+            "workflow automation",
+            "WhatsApp & SMS automation",
+            "cloud infrastructure",
+            "digital transformation",
+            "analytics and dashboards"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://softpulseai.com/#website",
+          "url": "https://softpulseai.com/",
+          "name": "SOFTPULSEAI TECHNOLOGIES",
+          "publisher": {
+            "@id": "https://softpulseai.com/#organization"
+          },
+          "inLanguage": "en-IN"
+        },
+        {
+          "@type": "OfferCatalog",
+          "@id": "https://softpulseai.com/#offer-catalog",
+          "name": "Healthcare AI Automation, SaaS & Digital Transformation Services",
+          "url": "https://softpulseai.com/",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-softpulse-his" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-medpulse-cms" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-ai-healthcare-solutions" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-docpulse" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-patientpulse" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-bi-dashboard" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-pulsereach" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-hospital-crm-system" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-healthcare-marketing-automation" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-social-media-marketing" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-performance-marketing" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-workpulse" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-custom-software-development" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-mobile-app-development" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-ai-automation-business-automation" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-dashboard-analytics-bi" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-crm-marketing-setup" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-it-outsourcing" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://softpulseai.com/#service-technical-support" } }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://softpulseai.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is SOFTPULSEAI TECHNOLOGIES and what services do you provide?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SOFTPULSEAI TECHNOLOGIES provides AI automation, healthcare software, CRM systems, SaaS platforms, custom software development, digital transformation, analytics, and growth execution services for healthcare and multiple industries."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer healthcare-specific products like HIS and CMS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We offer healthcare technology products such as SoftPulse HIS and MedPulse CMS, along with AI healthcare solutions and connected workflow tools designed for healthcare operations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you integrate AI automation with our existing systems?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We provide API integration and workflow automation services to connect AI-powered processes with your existing CRM, operational tools, and data sources."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you build SaaS platforms and custom software for enterprises?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We develop enterprise-grade SaaS platforms and custom software development solutions that scale, supporting cloud infrastructure, secure integrations, and analytics dashboards."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do your analytics and BI dashboards help business growth?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We deliver dashboard analytics and business intelligence to help teams track KPIs, improve decision-making, and accelerate growth execution with measurable reporting."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you provide CRM and marketing automation including WhatsApp and SMS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We provide CRM & marketing setup and automation, including WhatsApp & SMS automation workflows for customer engagement and healthcare communication."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you support startups, hospitals, clinics, and other industries?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We serve healthcare organizations like hospitals and clinics, plus other industries such as retail, education, enterprises, service businesses, startups, and technology companies."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-softpulse-his",
           "name": "SoftPulse HIS",
-          "description": "Hospital Information System for comprehensive hospital management"
+          "serviceType": "Healthcare Information System (HIS)",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "Healthcare HIS solution focused on operational workflows, automation, and connected analytics for hospitals and healthcare teams."
         },
         {
-          "@type": "SoftwareApplication", 
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-medpulse-cms",
           "name": "MedPulse CMS",
-          "description": "Clinic Management System for efficient clinic operations"
+          "serviceType": "Healthcare Content & Workflow CMS",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "MedPulse CMS for healthcare workflows, content management, and automation-ready integrations."
         },
         {
-          "@type": "SoftwareApplication",
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-ai-healthcare-solutions",
+          "name": "AI Healthcare Solutions",
+          "serviceType": "AI automation for healthcare",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "AI-driven solutions for healthcare operations, workflow automation, analytics, and scalable digital transformation."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-docpulse",
           "name": "DocPulse",
-          "description": "Doctor scheduling and communication platform"
+          "serviceType": "Doctor-focused healthcare operations",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "DocPulse to support healthcare processes with automation, integrations, and actionable reporting."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-patientpulse",
+          "name": "PatientPulse",
+          "serviceType": "Patient engagement & workflow automation",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "PatientPulse for patient-focused workflows, engagement automation, and connected communications."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-bi-dashboard",
+          "name": "BI Dashboard",
+          "serviceType": "Business Intelligence dashboards",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "BI dashboard services that consolidate data and provide analytics dashboards for measurable performance."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-pulsereach",
+          "name": "PulseReach",
+          "serviceType": "Healthcare growth & reach enablement",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "PulseReach to support healthcare growth execution with automation-ready systems and performance insights."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-hospital-crm-system",
+          "name": "Hospital CRM System",
+          "serviceType": "Hospital CRM",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "Hospital CRM system with CRM automation features to organize leads, patient journeys, and business workflows."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-healthcare-marketing-automation",
+          "name": "Healthcare Marketing Automation",
+          "serviceType": "Marketing automation for healthcare",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "Marketing automation services for healthcare organizations, including workflow automation and engagement optimization."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-social-media-marketing",
+          "name": "Social Media Marketing Services",
+          "serviceType": "Social media marketing",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "Social media marketing services that align with growth systems and measurable campaign performance."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-performance-marketing",
+          "name": "Performance Marketing Services",
+          "serviceType": "Performance marketing",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "Performance marketing services focused on measurable results, optimization, and growth execution support."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-workpulse",
+          "name": "WorkPulse",
+          "serviceType": "Business workflow automation",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "WorkPulse for automating workflows across teams using cloud infrastructure, integrations, and analytics."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-custom-software-development",
+          "name": "Custom Software Development",
+          "serviceType": "Custom software development",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "Custom software development services for healthcare and multi-industry businesses, including secure integrations and scalable architectures."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-mobile-app-development",
+          "name": "Mobile App Development",
+          "serviceType": "Mobile application development",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "Mobile app development for healthcare and business workflows, built to integrate with SaaS platforms and analytics."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-ai-automation-business-automation",
+          "name": "AI Solutions & Business Automation",
+          "serviceType": "AI solutions and automation",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "AI solutions and business automation services including workflow automation, API integration, and performance-oriented execution systems."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-dashboard-analytics-bi",
+          "name": "Dashboard Analytics & Business Intelligence",
+          "serviceType": "Analytics dashboards and BI",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "Analytics dashboards and BI services to transform data into actionable business intelligence and growth insights."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-crm-marketing-setup",
+          "name": "CRM & Marketing Setup",
+          "serviceType": "CRM and marketing setup",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "CRM & marketing setup including pipeline configuration, automation workflows, and engagement integrations (WhatsApp & SMS automation)."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-it-outsourcing",
+          "name": "IT Outsourcing",
+          "serviceType": "IT outsourcing",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "IT outsourcing services covering software engineering, integrations, and ongoing delivery support for scalable systems."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://softpulseai.com/#service-technical-support",
+          "name": "Technical Support",
+          "serviceType": "Technical support",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" },
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "Technical support for software platforms and automation systems, including maintenance, troubleshooting, and performance improvements."
         },
         {
           "@type": "SoftwareApplication",
+          "@id": "https://softpulseai.com/#app-softpulse-his",
+          "name": "SoftPulse HIS",
+          "applicationCategory": "HealthcareApplication",
+          "operatingSystem": "Web",
+          "url": "https://softpulseai.com/",
+          "description": "Healthcare Information System with automation-ready workflows and connected analytics for healthcare operations.",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://softpulseai.com/#app-medpulse-cms",
+          "name": "MedPulse CMS",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://softpulseai.com/",
+          "description": "CMS designed for healthcare workflows with integration and automation support.",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://softpulseai.com/#app-ai-healthcare-solutions",
+          "name": "AI Healthcare Solutions",
+          "applicationCategory": "HealthcareApplication",
+          "operatingSystem": "Web",
+          "url": "https://softpulseai.com/",
+          "description": "AI-driven healthcare automation solutions integrating with existing systems and enabling analytics.",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://softpulseai.com/#app-docpulse",
+          "name": "DocPulse",
+          "applicationCategory": "HealthcareApplication",
+          "operatingSystem": "Web",
+          "url": "https://softpulseai.com/",
+          "description": "Doctor workflow and automation platform supporting connected healthcare operations.",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://softpulseai.com/#app-patientpulse",
           "name": "PatientPulse",
-          "description": "Patient engagement and management app"
-        }
-      ],
-      "areaServed": "Worldwide",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-XXXXXXXXXX",
-        "contactType": "Customer Service",
-        "email": "info@softpulseai.com",
-        "availableLanguage": ["English", "Hindi"],
-        "hoursAvailable": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        }
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "IN",
-        "addressRegion": "India"
-      },
-      "sameAs": [
-        "https://linkedin.com/company/softpulseai",
-        "https://twitter.com/softpulseai",
-        "https://facebook.com/softpulseai",
-        "https://instagram.com/softpulseai"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "80",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "IT Solutions & Services",
-        "itemListElement": [
-          {
+          "applicationCategory": "HealthcareApplication",
+          "operatingSystem": "Web",
+          "url": "https://softpulseai.com/",
+          "description": "Patient workflow and engagement automation platform with support for communications automation.",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://softpulseai.com/#app-bi-dashboard",
+          "name": "BI Dashboard",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://softpulseai.com/",
+          "description": "Business intelligence dashboards with analytics dashboards and performance tracking.",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://softpulseai.com/#app-pulsereach",
+          "name": "PulseReach",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://softpulseai.com/",
+          "description": "Reach and growth enablement platform with performance-oriented execution systems.",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://softpulseai.com/#app-workpulse",
+          "name": "WorkPulse",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://softpulseai.com/",
+          "description": "Workflow automation platform built on cloud infrastructure with integration support and analytics.",
+          "provider": { "@id": "https://softpulseai.com/#softwarecompany" }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://softpulseai.com/#product-softpulse-his",
+          "name": "SoftPulse HIS",
+          "brand": { "@id": "https://softpulseai.com/#organization" },
+          "category": "Healthcare Software",
+          "description": "Enterprise-grade HIS designed for healthcare operations, automation, and analytics.",
+          "url": "https://softpulseai.com/",
+          "offers": {
             "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Custom Software Development"
-            }
-          },
-          {
-            "@type": "Offer", 
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI Solutions & Automation"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service", 
-              "name": "Healthcare Technology Solutions"
-            }
+            "url": "https://softpulseai.com/",
+            "availability": "https://schema.org/InStock"
           }
-        ]
-      }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://softpulseai.com/#product-medpulse-cms",
+          "name": "MedPulse CMS",
+          "brand": { "@id": "https://softpulseai.com/#organization" },
+          "category": "Healthcare Software",
+          "description": "Healthcare CMS with workflow automation and integration-ready architecture.",
+          "url": "https://softpulseai.com/",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://softpulseai.com/",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://softpulseai.com/#product-docpulse",
+          "name": "DocPulse",
+          "brand": { "@id": "https://softpulseai.com/#organization" },
+          "category": "Healthcare Software",
+          "description": "Doctor-focused automation and workflow support built for healthcare teams.",
+          "url": "https://softpulseai.com/",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://softpulseai.com/",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://softpulseai.com/#product-patientpulse",
+          "name": "PatientPulse",
+          "brand": { "@id": "https://softpulseai.com/#organization" },
+          "category": "Healthcare Software",
+          "description": "Patient engagement and workflow automation platform with connected communications.",
+          "url": "https://softpulseai.com/",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://softpulseai.com/",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://softpulseai.com/#product-pulsereach",
+          "name": "PulseReach",
+          "brand": { "@id": "https://softpulseai.com/#organization" },
+          "category": "Growth Automation Platform",
+          "description": "Healthcare reach and growth execution platform with performance insights.",
+          "url": "https://softpulseai.com/",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://softpulseai.com/",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://softpulseai.com/#product-workpulse",
+          "name": "WorkPulse",
+          "brand": { "@id": "https://softpulseai.com/#organization" },
+          "category": "Workflow Automation Platform",
+          "description": "Workflow automation built for scalability with integrations and analytics support.",
+          "url": "https://softpulseai.com/",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://softpulseai.com/",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://softpulseai.com/#product-bi-dashboard",
+          "name": "BI Dashboard",
+          "brand": { "@id": "https://softpulseai.com/#organization" },
+          "category": "Business Intelligence & Analytics",
+          "description": "Dashboard analytics and BI to track performance and support better decisions.",
+          "url": "https://softpulseai.com/",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://softpulseai.com/",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://softpulseai.com/#product-ai-healthcare-solutions",
+          "name": "AI Healthcare Solutions",
+          "brand": { "@id": "https://softpulseai.com/#organization" },
+          "category": "AI Healthcare Automation",
+          "description": "AI-powered automation and healthcare technology solutions with analytics and integration support.",
+          "url": "https://softpulseai.com/",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://softpulseai.com/",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
     }
     </script>
 
