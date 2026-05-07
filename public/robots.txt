@@ -1,8 +1,47 @@
 # robots.txt for softpulseai.com
-# Note: robots.txt controls crawling, not ranking directly.
+# Controls crawler access for search engines and AI bots
 
 User-agent: *
 Allow: /
 
 # Sitemap
 Sitemap: https://softpulseai.com/sitemap.xml
+
+# Block sensitive/private folders
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /api/
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Optional crawl delay
+Crawl-delay: 5

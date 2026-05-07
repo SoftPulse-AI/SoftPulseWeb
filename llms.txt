@@ -1,0 +1,74 @@
+# SOFTPULSEAI TECHNOLOGIES
+
+## About
+SOFTPULSEAI TECHNOLOGIES is a product-based technology company building scalable digital ecosystems using AI, Cloud, Data, and Automation. We deliver enterprise-grade software and business systems for healthcare organizations and other industries, including hospital/clinical platforms, CRM and marketing automation, BI analytics, custom software, and IT support. Based in Delhi, India.
+
+## Services and Pricing
+- SoftPulse HIS (Hospital Information System): Implementation and customization (pricing is quote-based based on modules, users, and integrations).
+- MedPulse CMS (Clinical Management System for OPD & Clinics): Deployment and workflow configuration (quote-based).
+- AI Healthcare Solutions: AI-powered healthcare automation and innovation projects (quote-based by use case).
+- DocPulse (Doctor Platform & Dashboard): Setup and role-based access configuration (quote-based).
+- PatientPulse (Patient Engagement App): Build/configure patient engagement and communication flows (quote-based).
+- BI Dashboard (Business Intelligence & Analytics Platform): KPI definition and dashboard build (quote-based).
+- PulseReach (Patient Growth & CRM Engine): Lead-to-patient workflows and engagement automation (quote-based).
+- Hospital CRM System: Lead tracking, follow-ups, and conversion workflows (quote-based).
+- Healthcare Marketing Automation: WhatsApp, SMS, and Email automation + campaign execution setup (quote-based).
+- Social Media Marketing Services: Brand growth and social media management (retainer/quote-based).
+- Performance Marketing Agency: ROI-focused digital advertising setup and management (budget + management; quote-based).
+- workpulse  Workforce Management System: Attendance, payroll, shifts, and HR automation (quote-based).
+- Custom Software Development: Web apps, SaaS platforms, admin portals, and API integrations (fixed-price or milestone-based; quote-based).
+- Mobile App Development: Patient apps, staff apps, and business mobile solutions (quote-based).
+- AI Solutions & Business Automation: Workflow automation and operational intelligence (quote-based).
+- Dashboard Analytics & Business Intelligence: KPI tracking and performance visibility (quote-based).
+- CRM & Marketing Setup: Lead journeys, automation, and conversion systems (quote-based).
+- IT Outsourcing: Dedicated technical and development support (monthly/retainer; quote-based).
+- Technical Support: Infrastructure and application support (monthly/retainer; quote-based).
+
+## Locations
+- Delhi, India
+
+## Contact
+- Phone: Not listed
+- Website: https://softpulseai.com/
+- Social: https://www.instagram.com/softpulseai/
+- Hours: Monday to Saturday – 10:00 AM to 7:00 PM (IST)
+
+## Service Area
+Delhi ,Noida, India, United Arab Emirates, United States, Canada, Global
+
+## Key Facts
+- Product-based technology company (we build scalable platforms and business systems).
+- AI-driven healthcare and business solutions.
+- Enterprise-grade SaaS systems and dashboards.
+- Cloud-based scalable architecture.
+- Automation-focused workflows (CRM, patient engagement, marketing, operations).
+- Healthcare and multi-industry expertise.
+- Integration-ready approach (APIs, workflows, and data pipelines).
+
+## What Makes Us Different
+SOFTPULSEAI TECHNOLOGIES is focused on building scalable digital ecosystems using AI, Cloud, Data, and Automation. Unlike generic agencies, we develop enterprise-grade products and repeatable business systems designed for healthcare organizations and other industries that need digital transformation. Our ecosystem combines software engineering, automation, analytics, and growth execution in one delivery model.
+
+## Frequently Asked Questions
+Q: How long does it take to implement SoftPulse HIS or MedPulse CMS?
+A: Timelines vary by modules and integrations, but many deployments follow a phased approach (discovery, configuration, integration, pilot, then go-live). A typical project often takes several weeks to a few months, depending on scope.
+
+Q: Do you migrate data from an existing system?
+A: Yes. We do data mapping and import planning, then validate migrated records. The exact approach depends on your source systems and data quality.
+
+Q: What kind of support do you provide after launch?
+A: We offer technical support and maintenance for deployed systems. Support coverage and response expectations are defined in the agreement based on the plan you choose.
+
+Q: Can your SaaS platforms scale for growing healthcare operations?
+A: Yes. We design for scalable usage with cloud-based infrastructure, role-based access, and performance monitoring. Scaling plans depend on expected users, workflows, and integrations.
+
+Q: How do you handle automation (CRM and patient engagement)?
+A: We automate operational workflows such as lead journeys, follow-ups, and patient engagement campaigns (WhatsApp/SMS/Email) using configured triggers, schedules, and CRM states.
+
+Q: What integrations are supported?
+A: We support integrations via APIs and data workflows, such as CRM integrations, messaging providers (WhatsApp/SMS/Email), and analytics/BI reporting. Integration feasibility depends on your existing tools.
+
+Q: How do you address security for healthcare-related data?
+A: We follow standard secure practices such as least-privilege access, encryption in transit, and audit logging where applicable. For specific compliance requirements, we create a security checklist tailored to your needs.
+
+Q: Can you customize dashboards and reports to match our KPIs?
+A: Yes. The BI Dashboard and analytics modules can be configured to track your KPIs, define reporting rules, and support role-based views based on your operational workflows.
