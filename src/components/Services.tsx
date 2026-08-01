@@ -20,6 +20,12 @@ const Services = () => {
 
   const services = [
     {
+      icon: <Heart className="w-8 h-8" />,
+      title: "Healthcare Solutions",
+      description: "Specialized healthcare products including Hospital Information Systems, Clinic Management, and AI diagnostic tools.",
+      features: ["HIS & CMS", "AI Diagnostics", "Patient Management"]
+    },
+    {
       icon: <Code className="w-8 h-8" />,
       title: "Custom Software & Web Development",
       description: "Tailored software, portals, websites, and web apps built for scalability, security, and seamless user experiences.",
@@ -60,12 +66,6 @@ const Services = () => {
       title: "IT Outsourcing & Technical Support",
       description: "Flexible dedicated teams, hosting solutions, DevOps, and ongoing tech support tailored to fit your timelines and budgets.",
       features: ["Dedicated Teams", "DevOps Solutions", "24/7 Support"]
-    },
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Healthcare Solutions",
-      description: "Specialized healthcare products including Hospital Information Systems, Clinic Management, and AI diagnostic tools.",
-      features: ["HIS & CMS", "AI Diagnostics", "Patient Management"]
     }
   ];
 
@@ -77,7 +77,8 @@ const Services = () => {
             Our <span className="gradient-text">Core Expertise</span>
           </h2>
           <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto">
-            Innovative solutions for a connected world, designed to drive sustainable growth and digital transformation.
+            Healthcare-first expertise, plus software, AI, web, apps, CRM, and growth systems for
+            retail, education, real estate, startups, and enterprises.
           </p>
         </div>
 

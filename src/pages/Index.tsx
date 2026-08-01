@@ -15,19 +15,19 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>SoftpulseAI Technologies - #1 AI Solutions & Custom Software Development Company in India | Healthcare HIS/CMS, Mobile Apps</title>
-        <meta name="description" content="#1 IT solutions provider in India. Expert in custom software development, AI automation, healthcare technology (HIS/CMS), mobile apps, web development, WhatsApp marketing, and digital transformation. 100+ successful projects, 80+ happy clients. Free consultation available." />
-        <meta name="keywords" content="SoftpulseAI, SoftpulseAI Technologies, Softpulse, custom software development India, AI solutions automation, healthcare technology, hospital information system HIS, clinic management system CMS, mobile app development, web development design, WhatsApp SMS chatbot marketing, digital marketing, IT outsourcing support, dashboard analytics development, AI automation, digital transformation, India IT company, software development company, AI company India, healthcare software, MedPulse, SoftPulse, DocPulse, PatientPulse, best IT company India, top software development company, AI automation services, healthcare IT solutions, custom web development, mobile app development company, digital marketing services, WhatsApp business API, chatbot development, business intelligence dashboard, IT consulting services" />
+        <title>SoftpulseAI | Healthcare, AI, Software, Web & App Development</title>
+        <meta name="description" content="SoftpulseAI builds healthcare software (HIS/CMS), AI automation, custom software, websites, mobile apps, CRM, marketing, and BI dashboards for hospitals, clinics, and businesses across industries." />
+        <meta name="keywords" content="SoftpulseAI, healthcare software, SoftPulse HIS, MedPulse CMS, AI solutions, custom software development, web development, mobile app development, BI dashboard, CRM, digital marketing, IT services India" />
         <meta name="author" content="SoftpulseAI Technologies" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="SoftpulseAI Technologies - Leading IT Solutions | Custom Software, AI, Healthcare" />
-        <meta property="og:description" content="Transform your business with our innovative digital solutions. Expert in custom software development, AI automation, healthcare technology, and mobile app development." />
+        <meta property="og:title" content="SoftpulseAI | Healthcare, AI, Software & Digital Solutions" />
+        <meta property="og:description" content="Healthcare products plus AI, software, web, apps, CRM, and dashboards for every industry." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://softpulseai.com" />
         <meta property="og:image" content="https://softpulseai.com/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SoftpulseAI Technologies - Leading IT Solutions" />
-        <meta name="twitter:description" content="Expert IT solutions in custom software development, AI automation, healthcare technology, and digital transformation." />
+        <meta name="twitter:title" content="SoftpulseAI | Healthcare, AI, Software & Digital Solutions" />
+        <meta name="twitter:description" content="Healthcare products plus AI, software, web, apps, CRM, and dashboards for every industry." />
         <link rel="canonical" href="https://softpulseai.com" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -152,7 +152,9 @@ const Index = () => {
                   Why Choose SoftpulseAI Technologies?
                 </h2>
                 <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto">
-                  As India's premier custom software development and AI solutions company, we specialize in healthcare technology, mobile app development, and digital transformation services that deliver exceptional ROI.
+                  As India's custom software and AI solutions partner, we serve healthcare first —
+                  and also retail, education, real estate, startups, and enterprises with web, apps,
+                  automation, CRM, marketing, and dashboards.
                 </p>
               </div>
               

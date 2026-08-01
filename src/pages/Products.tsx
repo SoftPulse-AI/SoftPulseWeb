@@ -28,6 +28,7 @@ const Products = () => {
       name: "SoftPulse HIS",
       icon: Building2,
       description: "Complete Hospital Information System",
+      href: "/softpulse-his",
       modules: [
         "Front Office", "IPD", "Physician", "Nursing", "Pharmacy", "Inventory",
         "Discharge Summary", "Daycare", "Masters", "MIS Reports", "Billing",
@@ -47,6 +48,7 @@ const Products = () => {
       name: "MedPulse CMS",
       icon: Stethoscope,
       description: "Clinical Management System for OPD & Clinics",
+      href: "/medpulse-cms",
       modules: [
         "OPD Registration", "Doctor Dashboard", "Visit History", "Follow-Up",
         "Appointment Booking", "Reminders", "e-Prescriptions", "Ads Management",
@@ -66,6 +68,7 @@ const Products = () => {
       name: "AI Healthcare Solutions",
       icon: Brain,
       description: "AI-Powered Healthcare Innovation",
+      href: "/ai-healthcare",
       modules: [
         "AI-Generated Prescriptions", "AI Nurse Care Plans", "No-Show Prediction",
         "Visit History Analysis", "EMR Automation", "Operative Notes Automation",
@@ -86,6 +89,7 @@ const Products = () => {
       name: "DocPulse",
       icon: User,
       description: "Doctor Platform & Dashboard",
+      href: "/docpulse",
       modules: [
         "Create & Share e-Prescriptions", "Access Patient Records & Visit History",
         "Real-time Availability Management", "Internal Messaging & Alerts",
@@ -105,6 +109,7 @@ const Products = () => {
       name: "PatientPulse",
       icon: Users,
       description: "Patient Engagement App",
+      href: "/patientpulse",
       modules: [
         "Appointment & Follow-up Reminders", "Secure Chat with Providers",
         "Access to Prescriptions & Records", "Feedback & Experience Ratings",
@@ -124,6 +129,7 @@ const Products = () => {
       name: "BI Dashboard",
       icon: BarChart3,
       description: "Business Intelligence & Analytics",
+      href: "/dashboard",
       modules: [
         "Real-time KPI Monitoring", "Financial Analytics", "Patient Flow Analysis",
         "Revenue Tracking", "Department Performance", "Inventory Management",
@@ -145,20 +151,35 @@ const Products = () => {
   return (
     <>
       <Helmet>
-        <title>HealthTech Solutions - SoftpulseAI Technologies</title>
-        <meta name="description" content="Healthcare software for hospitals and clinics: SoftPulse HIS, MedPulse CMS, DocPulse, PatientPulse, BI Dashboard, and AI Healthcare Solutions." />
-        <meta name="keywords" content="hospital management software India, clinic management system, healthcare software, hospital information system, AI healthcare solutions, patient engagement platform, healthcare analytics dashboard" />
+        <title>Healthcare Software Solutions | SoftPulse HIS, MedPulse CMS, AI & Dashboards</title>
+        <meta name="description" content="Healthcare software for hospitals and clinics: SoftPulse HIS, MedPulse CMS, DocPulse, PatientPulse, AI Healthcare Solutions, and BI Dashboards. Book a demo." />
+        <meta name="keywords" content="healthcare software India, hospital information system, SoftPulse HIS, clinic management system, MedPulse CMS, DocPulse, PatientPulse, AI healthcare solutions, healthcare BI dashboard, hospital management software" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://softpulseai.com/healthtech" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://softpulseai.com/healthtech" />
-        <meta property="og:title" content="HealthTech Solutions - SoftpulseAI Technologies" />
-        <meta property="og:description" content="Healthcare software for hospitals and clinics: HIS, CMS, doctor workflow, patient engagement, BI, and AI automation." />
+        <meta property="og:title" content="Healthcare Software Solutions | SoftpulseAI HealthTech" />
+        <meta property="og:description" content="Complete healthtech stack: HIS, CMS, doctor & patient apps, AI healthcare, and BI dashboards for hospitals and clinics." />
         <meta property="og:image" content="https://softpulseai.com/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="HealthTech Solutions - SoftpulseAI Technologies" />
-        <meta name="twitter:description" content="Healthcare software for hospitals and clinics: HIS, CMS, doctor workflow, patient engagement, BI, and AI automation." />
+        <meta name="twitter:title" content="Healthcare Software Solutions | SoftpulseAI HealthTech" />
+        <meta name="twitter:description" content="Complete healthtech stack: HIS, CMS, doctor & patient apps, AI healthcare, and BI dashboards." />
         <meta name="twitter:image" content="https://softpulseai.com/favicon.png" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "SoftpulseAI Healthcare Products",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "SoftPulse HIS", url: "https://softpulseai.com/softpulse-his" },
+              { "@type": "ListItem", position: 2, name: "MedPulse CMS", url: "https://softpulseai.com/medpulse-cms" },
+              { "@type": "ListItem", position: 3, name: "AI Healthcare Solutions", url: "https://softpulseai.com/ai-healthcare" },
+              { "@type": "ListItem", position: 4, name: "DocPulse", url: "https://softpulseai.com/docpulse" },
+              { "@type": "ListItem", position: 5, name: "PatientPulse", url: "https://softpulseai.com/patientpulse" },
+              { "@type": "ListItem", position: 6, name: "BI Dashboard", url: "https://softpulseai.com/dashboard" },
+            ],
+          })}
+        </script>
       </Helmet>
       
       <div className="min-h-screen bg-background relative">
@@ -293,27 +314,18 @@ const Products = () => {
                         {/* CTA */}
                         <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-white/10">
                           <Button
-  className="gradient-primary hover:shadow-primary flex-1"
-  onClick={() => window.open('https://calendly.com/softpulseai/30min', '_blank')}
->
-  Request Demo
-</Button>
-<Button
-  variant="outline"
-  className="flex-1"
-  onClick={() => {
-    // Replace '/brochure.pdf' with your actual brochure file path
-    const link = document.createElement('a');
-    link.href = '/Healthcare Profile.pdf';
-    link.download = 'Healthcare Profile.pdf'; // Optional: choose your filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }}
->
-  Learn More
-</Button>
-
+                            className="gradient-primary hover:shadow-primary flex-1"
+                            onClick={() => window.open('https://calendly.com/softpulseai/30min', '_blank')}
+                          >
+                            Request Demo
+                          </Button>
+                          <Button
+                            variant="outline"
+                            className="flex-1"
+                            onClick={() => { window.location.href = currentProduct.href; }}
+                          >
+                            View Full Product Page
+                          </Button>
                         </div>
                       </div>
                     )}

@@ -150,21 +150,26 @@
 
 @layer base {
   * {
-    @apply border-border;
-    font-family: "Poppins", sans-serif !important;
+    @apply border-border font-sans;
+  }
+
+  html {
+    font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    font-size: 15px;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-family: "Poppins", sans-serif !important;
+    @apply bg-background text-foreground antialiased font-sans;
+    font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
     background: linear-gradient(135deg, hsl(220 27% 4%), hsl(240 10% 8%));
   }
 
-  html,
-  body,
-  #root {
-    font-family: "Poppins", sans-serif !important;
-    font-size: 15px;
+  #root,
+  button,
+  input,
+  textarea,
+  select {
+    font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
   }
 
   h1 { font-size: clamp(1.5rem, 2.3vw, 2.1rem) !important; line-height: 1.18 !important; }

@@ -1,70 +1,83 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Heart, 
-  Calendar, 
-  Users, 
-  Smartphone, 
-  Brain, 
+import {
+  Heart,
+  Calendar,
+  Users,
+  Smartphone,
+  Brain,
   BarChart3,
   ExternalLink,
-  Star
+  Star,
+  ArrowRight,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Products = () => {
-  
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+
   const products = [
     {
-      name: "MedPulse (CMS)",
-      description: "End-to-end clinic management system that streamlines appointments, prescriptions, billing, and patient records with intuitive interface.",
-      icon: <Heart className="w-8 h-8" />,
-      features: ["Patient Management", "Appointment Scheduling", "Billing & Insurance", "Digital Prescriptions"],
-      badge: "Popular",
-      color: "from-red-500 to-pink-500"
+      name: "SoftPulse HIS",
+      description:
+        "Hospital Information System for end-to-end hospital operations, billing, IPD/OPD, pharmacy, and real-time monitoring.",
+      icon: <Users className="w-8 h-8" />,
+      features: ["18+ Hospital Modules", "Billing & IPD/OPD", "MIS Reports", "Built-in AI Features"],
+      badge: "Hospital",
+      color: "from-blue-500 to-cyan-500",
+      href: "/softpulse-his",
     },
     {
-      name: "SoftPulse (HIS)",
-      description: "Comprehensive Hospital Information System for large healthcare facilities with advanced patient care and operational management.",
-      icon: <Users className="w-8 h-8" />,
-      features: ["Multi-department Management", "Inventory Control", "Staff Scheduling", "Report Generation"],
-      badge: "Enterprise",
-      color: "from-blue-500 to-cyan-500"
+      name: "MedPulse CMS",
+      description:
+        "Clinic Management System for multi-doctor OPD clinics — appointments, e-prescriptions, reminders, and analytics.",
+      icon: <Heart className="w-8 h-8" />,
+      features: ["OPD Registration", "e-Prescriptions", "WhatsApp Reminders", "Clinic Analytics"],
+      badge: "Clinic",
+      color: "from-red-500 to-pink-500",
+      href: "/medpulse-cms",
     },
     {
       name: "DocPulse",
-      description: "Doctor scheduling and communication platform that enhances collaboration and patient care coordination.",
+      description:
+        "Doctor platform for e-prescriptions, patient history, availability, and staff communication.",
       icon: <Calendar className="w-8 h-8" />,
-      features: ["Smart Scheduling", "Doctor Communication", "Patient Coordination", "Mobile Alerts"],
-      badge: "New",
-      color: "from-green-500 to-emerald-500"
+      features: ["e-Prescriptions", "Patient Records", "Scheduling", "Internal Alerts"],
+      badge: "Doctors",
+      color: "from-green-500 to-emerald-500",
+      href: "/docpulse",
     },
     {
       name: "PatientPulse",
-      description: "Mobile app for patient engagement with appointment booking, medical records access, and health tracking.",
+      description:
+        "Patient engagement app for appointments, records, secure chat, and branded hospital experiences.",
       icon: <Smartphone className="w-8 h-8" />,
-      features: ["Appointment Booking", "Medical Records", "Health Tracking", "Telemedicine"],
-      badge: "Mobile",
-      color: "from-purple-500 to-violet-500"
+      features: ["Appointment Reminders", "Medical Records", "Secure Chat", "Branded Apps"],
+      badge: "Patients",
+      color: "from-purple-500 to-violet-500",
+      href: "/patientpulse",
     },
     {
-      name: "AI Healthcare Tools",
-      description: "Advanced AI-powered diagnostics, predictions, and analytics for improved patient outcomes and operational efficiency.",
+      name: "AI Healthcare",
+      description:
+        "AI healthcare solutions — prescriptions support, no-show prediction, risk assessment, and clinical automation.",
       icon: <Brain className="w-8 h-8" />,
-      features: ["Diagnostic AI", "Predictive Analytics", "Image Recognition", "Risk Assessment"],
-      badge: "AI-Powered",
-      color: "from-orange-500 to-yellow-500"
+      features: ["Clinical AI Assist", "No-Show Prediction", "Risk Assessment", "EMR Automation"],
+      badge: "AI",
+      color: "from-orange-500 to-yellow-500",
+      href: "/ai-healthcare",
     },
     {
       name: "BI Dashboard",
-      description: "Smart management dashboard for hospitals and clinics with real-time insights and performance metrics.",
+      description:
+        "Healthcare BI dashboards for KPIs, patient flow, revenue tracking, and predictive operational insights.",
       icon: <BarChart3 className="w-8 h-8" />,
-      features: ["Real-time Analytics", "Performance Metrics", "Custom Reports", "Data Visualization"],
+      features: ["Real-time KPIs", "Patient Flow", "Revenue Analytics", "Custom Reports"],
       badge: "Analytics",
-      color: "from-teal-500 to-cyan-500"
-    }
+      color: "from-teal-500 to-cyan-500",
+      href: "/dashboard",
+    },
   ];
 
   return (
@@ -75,13 +88,17 @@ const Products = () => {
             Healthcare <span className="gradient-text">Products</span>
           </h2>
           <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto mb-3">
-            Empowering healthcare with innovative digital solutions that improve patient care and operational efficiency.
+            Complete healthtech stack for hospitals and clinics — HIS, CMS, doctor &amp; patient apps,
+            AI healthcare tools, and BI dashboards.
           </p>
-          <div className="flex items-center justify-center gap-2 text-foreground/60">
-            <span>Visit our healthcare portal:</span>
-            <a 
-              href="https://healthcare.softpulseai.com" 
-              target="_blank" 
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-foreground/60">
+            <Link to="/healthtech" className="text-accent hover:text-accent-glow transition-colors font-medium">
+              View all HealthTech solutions
+            </Link>
+            <span aria-hidden="true">·</span>
+            <a
+              href="https://healthcare.softpulseai.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-accent hover:text-accent-glow transition-colors inline-flex items-center gap-1"
             >
@@ -91,71 +108,77 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
-          {products.map((product, index) => (
-            <Card 
-              key={index} 
-              className="glass-card border-white/10 hover-lift group cursor-pointer overflow-hidden relative"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {products.map((product) => (
+            <Card
+              key={product.href}
+              className="glass-card border-white/10 hover-lift group overflow-hidden relative"
             >
               <CardHeader className="relative pb-3">
                 <div className="flex items-start justify-between mb-2">
-                  <div 
+                  <div
                     className={`w-10 h-10 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center group-hover:glow-accent transition-all duration-300`}
                   >
-                    <div className="text-white text-sm">
-                      {product.icon}
-                    </div>
+                    <div className="text-white text-sm">{product.icon}</div>
                   </div>
-                  <Badge 
-                    variant="secondary" 
+                  <Badge
+                    variant="secondary"
                     className="glass-card border-white/20 text-accent text-xs px-2 py-1"
                   >
                     {product.badge}
                   </Badge>
                 </div>
-                <CardTitle className="text-sm font-semibold text-foreground leading-tight">{product.name}</CardTitle>
+                <CardTitle className="text-base font-semibold text-foreground leading-tight">
+                  {product.name}
+                </CardTitle>
               </CardHeader>
               <CardContent className="pt-0">
-                <CardDescription className="text-xs text-foreground mb-3 leading-tight line-clamp-2">
+                <CardDescription className="text-sm text-foreground/80 mb-3 leading-snug">
                   {product.description}
                 </CardDescription>
-                
-                <div className="space-y-1 mb-3">
-                  {product.features.slice(0, 2).map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-xs text-foreground">
-                      <Star className="w-2 h-2 text-accent mr-1" />
+
+                <div className="space-y-1 mb-4">
+                  {product.features.map((feature) => (
+                    <div key={feature} className="flex items-center text-xs text-foreground/70">
+                      <Star className="w-2.5 h-2.5 text-accent mr-1.5 shrink-0" />
                       {feature}
                     </div>
                   ))}
                 </div>
 
-               <Button
-  size="sm"
-  variant="outline"
-  className="w-full glass-card border-white/20 hover:border-accent/50 group text-xs py-1"
-  onClick={() => navigate("/products")}
->
-  Learn More
-  <ExternalLink className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform" />
-</Button>
-
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="w-full glass-card border-white/20 hover:border-accent/50 group text-xs"
+                  onClick={() => navigate(product.href)}
+                >
+                  View {product.name}
+                  <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className="text-center mt-10">
           <div className="glass-card p-5 rounded-xl max-w-3xl mx-auto">
             <h3 className="text-xl md:text-2xl font-bold mb-3">
-              Currently Serving <span className="gradient-text">Multiple Hospitals</span> Across India
+              Ready to digitize your hospital or clinic?
             </h3>
-            <p className="text-sm md:text-base text-foreground/70 mb-4">
-              Join the growing number of healthcare institutions that trust SoftpulseAI for their digital transformation.
+            <p className="text-sm text-foreground/70 mb-4">
+              Get SoftPulse HIS, MedPulse CMS, AI healthcare tools, and dashboards working together.
             </p>
-            <Button className="gradient-primary hover:shadow-primary">
-              Request Demo
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button
+                className="gradient-primary"
+                onClick={() => window.open("https://calendly.com/softpulseai/30min", "_blank")}
+              >
+                Book HealthTech Demo
+              </Button>
+              <Button variant="outline" onClick={() => navigate("/healthtech")}>
+                Explore All Products
+              </Button>
+            </div>
           </div>
         </div>
       </div>

@@ -25,6 +25,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { useEffect } from "react";
 import FloatingShapes from "@/components/FloatingShapes";
 import Chatbot from "@/components/Chatbot";
+import ContactPopup from "@/components/ContactPopup";
 import { HIDDEN_KEYWORD_PAGES, PRODUCT_PAGES, SERVICE_PAGES } from "@/seo/seoConfig";
 
 const ScrollToTopOnRouteChange = () => {
@@ -118,6 +119,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Chatbot />
+          <ContactPopup />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
